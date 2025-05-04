@@ -3,9 +3,7 @@
 
     <TopBarComponent></TopBarComponent>
 
-    <div>
-      <RouterView />
-    </div>
+    <RouterView />
   </div>
 </template>
 
