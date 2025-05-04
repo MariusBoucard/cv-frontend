@@ -2,7 +2,8 @@
     <div class="mt-4">
         <p class="text-gray-800 font-semibold label">{{ label }}</p>
 
-        <div class="audio-knob" @click="togglePlay">
+
+        <div class="audio-knob" @mousedown="startKnobRotation" @touchstart="startKnobRotation">
             <div class="playhead" :style="{ transform: `rotate(${playheadAngle}deg)` }"></div>
         </div>
         <div class="track">
@@ -47,6 +48,7 @@ export default {
             currentTime: 0,
             duration: 0,
             intervalId: null,
+            isRotating: false,
         };
     },
     computed: {
@@ -128,6 +130,48 @@ export default {
             this.currentTime = 0;
             clearInterval(this.intervalId);
         },
+        startKnobRotation(event) {
+            this.isDragging = false;
+
+            const knob = event.target.closest(".audio-knob");
+            const rect = knob.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            const moveHandler = (e) => {
+                this.isDragging = true; // User is dragging
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+                const angle = Math.atan2(clientY - centerY, clientX - centerX) * (180 / Math.PI) + 90;
+                const normalizedAngle = (angle + 360) % 360;
+
+                this.playheadAngle = normalizedAngle;
+                this.currentTime = (normalizedAngle / 360) * this.duration;
+                this.progress = (this.currentTime / this.duration) * 100;
+
+                const audio = this.activeTrack === "dry" ? this.audioDry : this.audioWet;
+                if (audio) {
+                    audio.currentTime = this.currentTime;
+                }
+            };
+
+            const stopHandler = () => {
+                if (!this.isDragging) {
+                    this.togglePlay(); // Toggle play if it was a click
+                }
+                window.removeEventListener("mousemove", moveHandler);
+                window.removeEventListener("mouseup", stopHandler);
+                window.removeEventListener("touchmove", moveHandler);
+                window.removeEventListener("touchend", stopHandler);
+            };
+
+            window.addEventListener("mousemove", moveHandler);
+            window.addEventListener("mouseup", stopHandler);
+            window.addEventListener("touchmove", moveHandler);
+            window.addEventListener("touchend", stopHandler);
+        },
+
     },
     watch: {
         isPlaying(newValue) {

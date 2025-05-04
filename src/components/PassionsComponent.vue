@@ -240,6 +240,7 @@ export default {
 .flex-1 .flex.justify-center.mt-6 {
     margin-top: 16px;
     margin-bottom: auto;
+
 }
 
 button.text-blue-500 {
