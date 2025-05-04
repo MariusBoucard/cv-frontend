@@ -1,21 +1,52 @@
 <template>
-    <div class="motivation">
-        <h2>Motivation</h2>
-        <p>
-            I am passionate about technology and its potential to improve lives. I enjoy solving complex problems and
-            creating innovative solutions that make a difference. My goal is to leverage my skills in software
-            development and data analysis to contribute to meaningful projects that have a positive impact on society.
-        </p>
+    <div class="flex justify-center items-start min-h-screen bg-gray-100">
+        <div class="bg-white shadow-md rounded-lg p-6 transition-all duration-300 listItems w-4/5">
+            <!-- Title -->
+            <h1 class="text-3xl font-bold mb-4 text-center">My Motivation</h1>
 
+            <!-- Short Description -->
+            <p class="text-lg text-gray-700 mb-6 text-center">
+                A brief introduction to my motivation and what drives me forward.
+            </p>
+
+            <!-- Video Section -->
+            <div class="flex justify-center mb-6">
+                <video class="rounded-lg shadow-md" controls width="640" height="360">
+                    <source src="http://localhost:8080/api/video" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Long Motivational Text -->
+            <div class="text-gray-800 leading-relaxed">
+                <p class="mb-4">
+                    Motivation is the driving force behind everything I do. It pushes me to overcome challenges, strive
+                    for excellence, and achieve my goals. Here are some key points that define my motivation:
+                </p>
+
+                <!-- Key Points -->
+                <ul class="list-disc list-inside mb-4">
+                    <li>Passion for continuous learning and growth.</li>
+                    <li>Commitment to making a positive impact.</li>
+                    <li>Resilience in the face of adversity.</li>
+                    <li>Desire to inspire and empower others.</li>
+                </ul>
+
+                <p>
+                    These principles guide me every day, helping me stay focused and determined to reach new heights. I
+                    believe that with the right mindset and dedication, anything is possible.
+                </p>
+            </div>
+        </div>
     </div>
 </template>
-<script setup>
 
+<script>
+export default {
+    name: "MotivationComponent",
+};
 </script>
+
 <style scoped>
-.motivation {
-    width: 80%;
-    margin: 0 auto;
-    padding: 0px;
-}
+/* Add any custom styles here if needed */
 </style>
