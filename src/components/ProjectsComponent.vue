@@ -68,7 +68,8 @@
                 </div>
                 <div class="flex-[1] flex flex-col justify-center items-center mt-6 md:mt-0 md:ml-6">
                     <!-- Card Component -->
-                    <Card3DComponent :image="project.card.image" :description="project.card.description" />
+                    <Card3DComponent :image="project.card.image" :description="project.card.description"
+                        class="fixed-height" />
 
                     <!-- Button Container -->
                     <div class="flex justify-center mt-4">
@@ -177,6 +178,15 @@ button.text-blue-500:hover {
 
 .bg-white .p-6 {
     padding: 24px;
+}
+
+.fixed-height {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 @media (min-width: 768px) {
