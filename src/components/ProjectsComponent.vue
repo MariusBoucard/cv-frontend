@@ -100,6 +100,7 @@
 import Card3DComponent from "@/widgets/Card3DComponent.vue";
 import SoundPlayer from "@/widgets/SoundPlayerComponent.vue";
 import projectsData from "@/data/ProjectsData.json";
+
 export default {
     name: "ProjectsComponent",
     components: {

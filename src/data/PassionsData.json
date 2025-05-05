@@ -1,25 +1,42 @@
 {
   "passions": [
     {
-      "title": "Project 1",
-      "shortDescription": "A brief description of project 1.",
+      "title": "Musique",
+      "description": "A brief description of project 1.",
       "card": {
-        "image": "/path/to/image1.jpg",
+        "image": "/images/passions/bfShoot.JPG",
         "description": "Card description 1"
       },
-      "imageList": ["/path/to/image1.jpg", "/path/to/image2.jpg"]
+      "imageList": [
+        "/images/passions/brutalfekal.jpg",
+        "/images/passions/repeteBF.jpg",
+        "/images/passions/mabecanealbum.png"
+      ]
     },
     {
-      "title": "Project 2",
-      "shortDescription": "A brief description of project 2.",
+      "title": "Rando",
+      "description": "Ma récente découverte de la montagne dûe à mon déménagement à Grenoble",
+      "card": {
+        "image": "/images/passions/rando/chamechaudeHead.jpg",
+        "description": "Card description 2"
+      },
+      "imageList": [
+        "/images/passions/rando/chamechaude.jpg",
+        "/images/passions/rando/moucherotte.jpg",
+        "/images/passions/rando/chamrousse.jpg"
+      ]
+    },
+    {
+      "title": "Sport",
+      "description": "Trail, course, street workout",
       "card": {
         "image": "/path/to/image2.jpg",
         "description": "Card description 2"
       }
     },
     {
-      "title": "Project 2",
-      "shortDescription": "A brief description of project 2.",
+      "title": "Studio",
+      "description": "A brief description of project 1.",
       "card": {
         "image": "/path/to/image2.jpg",
         "description": "Card description 2"

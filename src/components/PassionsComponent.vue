@@ -2,7 +2,7 @@
     <div class="flex flex-col items-center min-h-screen bg-gray-100 p-6">
         <h1 class="text-4xl font-bold mb-6 text-center">My passions</h1>
         <p class="text-lg text-gray-700 mb-8 text-center">
-            A brief introduction to my passions and what drives me forward.
+            Au dela de mes travaux techniques, j'aime aussi partager des moments de création avec d'autres personnes
         </p>
 
         <div class="w-4/5 relative">
@@ -19,17 +19,17 @@
         </div>
 
         <div v-for="( project, index ) in  passions " :key="index"
-            class="w-full max-w-4xl border-b last:no-border last:rounded-lg p-6">
+            class="w-3/4 border-b last:no-border last:rounded-lg p-6">
             <h2 class="text-2xl font-bold mb-2">{{ project.title }}</h2>
 
             <div class="flex items-center">
-                <p class="text-gray-700 mb-0 flex-1">{{ project.shortDescription }}</p>
+                <p class="text-gray-700 mb-0 flex-1">{{ project.description }}</p>
                 <div class="mb-0">
                     <Card3DComponent :image="project.card.image" :description="project.card.description" />
                 </div>
             </div>
             <div v-if="project.imageList" class="mt-4">
-                <CarousselComponent :images="images" />
+                <CarousselComponent :images="project.imageList" />
             </div>
         </div>
     </div>

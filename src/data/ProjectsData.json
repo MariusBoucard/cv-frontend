@@ -1,9 +1,9 @@
 {
   "projects": [
     {
-      "title": "Ce site internet",
-      "shortDescription": "Capturing moments through the lens.",
-      "details": "Mobiliser les connaissances et comprendre les bases de la création d'une architecture Spring et Vuejs",
+      "title": "Cv en ligne",
+      "shortDescription": "Ce projet que vous consultez, a été réalisé afin de développer mes compréhesions en déploiement via Docker et Kubernetes.",
+      "details": "Mise en place d'une architecture complète composée d’un frontend en VueJS, intégrant Tailwind CSS pour la conception d’une interface responsive, et d’un backend en Spring Boot assurant la gestion de la logique métier. Les deux services sont conteneurisés avec Docker et déployés sur un cluster Kubernetes, permettant de se familiariser avec les bonnes pratiques de déploiement d'applications en environnement distribué.     Le projet inclut également une fonctionnalité de diffusion de flux vidéo depuis le backend, impliquant la gestion de contenu multimédia en temps réel. Ce projet a permis de consolider des compétences en développement web fullstack (VueJS, Spring Boot), en conteneurisation (Docker) et en orchestration (Kubernetes), tout en apportant une première expérience sur la gestion de flux vidéo et l’utilisation de frameworks CSS utilitaires comme Tailwind CSS.",
       "showDetails": false,
       "detailImages": [
         "/images/techno/Vuejs.png",
@@ -13,13 +13,6 @@
         "/images/techno/nginx.png"
       ],
       "technologies": ["Vuejs", "Spring", "Docker", "Kubernetes", "Nginx"],
-      "extraContent": {
-        "image": "path-to-photography-image.jpg",
-        "video": "path-to-video.mp4",
-        "soundDry": "http://localhost:8080/api/audio",
-        "soundWet": "http://localhost:8080/api/audio",
-        "links": ["https://www.example.com/link1"]
-      },
       "card": {
         "image": "/images/projets/guitarApp.png",
         "description": "This is a short description."
@@ -31,9 +24,10 @@
     },
     {
       "title": "Virtual Amplifier NAM (VST)",
-      "shortDescription": "Creating and enjoying melodies.",
-      "details": "Music has always been a source of inspiration for me. I love playing instruments and exploring different genres.",
+      "shortDescription": "Plugin audio d'Ampli",
+      "details": "## Développement d’un plugin audio d’amplification virtuelle\n\nDéveloppement d’un plugin audio d’amplification virtuelle à l’aide du framework **JUCE**, reposant sur le moteur open source **Neural Amp Modeler**. Le plugin permet de charger différents modèles d’amplis neuronaux compatibles avec l’architecture du framework d’origine. Il prend également en charge l'importation de réponses impulsionnelles (**IR**), utilisées pour simuler des cabinets de haut-parleurs ou des effets de réverbération.\n\nUne section de filtres paramétriques simples permet d’appliquer une égalisation sommaire du signal audio. L’interface graphique a été conçue en **3D avec Blender**, puis intégrée au plugin pour une présentation visuelle personnalisée.\n\n### Ce projet a permis de :\n\n- Réaliser un proof of concept de plugin audio avec **JUCE** ;\n- Approcher les bases du traitement numérique du signal audio ;\n- Concevoir une architecture modulable pour expérimenter différentes chaînes de traitement audio ;\n- Acquérir les fondamentaux de la modélisation **3D avec Blender**.",
       "showDetails": false,
+
       "technologies": ["JUCE", "C++", "CMake", "Blender"],
       "detailImages": [
         "/images/techno/Cpp.png",
@@ -41,7 +35,13 @@
         "/images/techno/Cmake.png",
         "/images/techno/blender.png"
       ],
-      "extraContent": { "video": null },
+      "extraContent": {
+        "image": "path-to-photography-image.jpg",
+        "video": "path-to-video.mp4",
+        "soundDry": "http://localhost:8080/api/audio",
+        "soundWet": "http://localhost:8080/api/audio",
+        "links": ["https://www.example.com/link1"]
+      },
       "card": {
         "image": "/images/projets/guitarApp.png",
         "description": "This is a short description."

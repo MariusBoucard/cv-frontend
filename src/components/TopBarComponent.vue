@@ -15,6 +15,8 @@
     <div class="external-links">
       <a href="https://github.com/" target="_blank" class="external-link">GitHub</a>
       <a href="https://open.spotify.com/" target="_blank" class="external-link">Spotify</a>
+      <a href="https://www.linkedin.com/in/marius-boucard-bocciarelli-390793222/" target="_blank"
+        class="external-link">LinkedIn</a>
     </div>
 
     <!-- Router Links -->
