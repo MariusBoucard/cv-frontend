@@ -21,7 +21,8 @@
     <div class="router-links">
       <router-link to="/motivations" class="bubble">Motivations</router-link>
       <router-link to="/cv" class="bubble">CV</router-link>
-      <router-link to="/passions" class="bubble">Projects</router-link>
+      <router-link to="/projects" class="bubble">Projects</router-link>
+      <router-link to="/passions" class="bubble">Passions</router-link>
       <router-link to="/contact" class="bubble">Contact</router-link>
     </div>
   </div>

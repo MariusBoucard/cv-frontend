@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MotivationComponent from '../components/MotivationComponent.vue'
 import PresentationComponent from '../components/PresentationComponent.vue'
+import ProjectsComponent from '@/components/ProjectsComponent.vue'
 import PassionsComponent from '@/components/PassionsComponent.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -19,6 +21,11 @@ const router = createRouter({
       path: '/cv',
       name: 'cv',
       component: () => import('../components/PresentationComponent.vue'),
+    },
+    {
+      path: '/projects',
+      name: 'projects',
+      component: () => import('../components/ProjectsComponent.vue'),
     },
     {
       path: '/passions',
