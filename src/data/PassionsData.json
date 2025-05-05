@@ -1,0 +1,29 @@
+{
+  "passions": [
+    {
+      "title": "Project 1",
+      "shortDescription": "A brief description of project 1.",
+      "card": {
+        "image": "/path/to/image1.jpg",
+        "description": "Card description 1"
+      },
+      "imageList": ["/path/to/image1.jpg", "/path/to/image2.jpg"]
+    },
+    {
+      "title": "Project 2",
+      "shortDescription": "A brief description of project 2.",
+      "card": {
+        "image": "/path/to/image2.jpg",
+        "description": "Card description 2"
+      }
+    },
+    {
+      "title": "Project 2",
+      "shortDescription": "A brief description of project 2.",
+      "card": {
+        "image": "/path/to/image2.jpg",
+        "description": "Card description 2"
+      }
+    }
+  ]
+}

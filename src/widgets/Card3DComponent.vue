@@ -6,10 +6,10 @@
             <!-- Image Holder -->
             <div
                 class="image-holder w-4/5 h-3/5 bg-white rounded-lg shadow-lg mx-auto mt-8 overflow-hidden border border-gray-300">
-                <img :src="image" alt="Card Image" class="w-full h-full object-cover" />
+                <img v-if="image" :src="image" alt="Card Image" class="w-full h-full object-cover" />
             </div>
             <!-- Legend -->
-            <div class="legend text-center text-gray-700 font-medium mt-4 px-4">
+            <div v-if="description" class="legend text-center text-gray-700 font-medium mt-4 px-4">
                 {{ description }}
             </div>
         </div>

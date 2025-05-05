@@ -2,35 +2,83 @@
     <div class="flex justify-center items-start min-h-screen bg-gray-100">
         <div class="bg-white shadow-md rounded-lg p-6 transition-all duration-300 listItems"
             :class="activeIndex !== null ? 'w-4/5 md:w-3/4' : 'w-3/5 md:w-2/3 lg:w-1/2'">
-            <h1 class="text-2xl font-bold mb-4 text-center">Mes experiences professionnelles</h1>
-            <p>
-                quick descriptive
+            <!-- Title -->
+            <h1 class="text-4xl font-extrabold mb-6 text-center text-gray-800">
+                {{ title }}
+            </h1>
 
+            <!-- Description -->
+            <p class="text-lg text-center text-gray-600 mb-6">
+                {{ description }}
             </p>
-            <ul>
-                <li v-for="(experience, index) in experiences" :key="index" class="mb-4 border-b pb-4">
-                    <!-- Collapsed Section -->
-                    <div class="flex justify-between items-center cursor-pointer" @click="toggleDetails(index)">
-                        <div class="flex items-center gap-4">
-                            <img :src="experience.technologyImage" alt="Technology" class="w-10 h-10 rounded-full" />
-                            <h2 class="text-lg font-semibold">{{ experience.title }}</h2>
+
+            <!-- Video -->
+            <div class="flex justify-center mb-6">
+                <video v-if="videoLink" controls class="rounded-lg shadow-md w-3/5">
+                    <source :src="videoLink" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <h2 class="text-2xl font-semibold text-gray-700 mb-4 text-center">
+                {{ titleInfo }}
+            </h2>
+            <p class="text-base text-center text-gray-600">
+                {{ additionnalInformations }}
+            </p>
+            <ul class="cvList">
+                <li v-for="(experience, index) in experiences" :key="index" class="mb-6 border-b pb-6">
+                    <div class="flex items-center gap-6 cursor-pointer" @click="toggleDetails(index)">
+                        <!-- Image Section -->
+                        <div
+                            class="flex-shrink-0 h-15 w-40 bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center">
+                            <img :src="experience.technologyImage" alt="Technology" class="h-4/5 object-cover" />
                         </div>
-                        <span class="text-gray-500" :class="{ 'rotate-180': activeIndex === index }">
-                            ▼
-                        </span>
+
+                        <!-- Content Section -->
+                        <div class="flex items-center flex-grow">
+                            <!-- Title and Job Section -->
+                            <div class="flex flex-col flex-grow">
+                                <h2 class="text-lg font-bold text-gray-800 truncate">
+                                    {{ experience.title }}
+                                </h2>
+                                <p class="text-sm text-gray-600 mt-2 text-center mx-auto">
+                                    {{ experience.job }}
+                                </p>
+                            </div>
+
+                            <!-- Year and Arrow Section -->
+                            <div class="flex flex-col items-end text-sm text-gray-500 w-32">
+                                <span class="text-gray-500 transform transition-transform"
+                                    :class="{ 'rotate-180': activeIndex === index }">
+                                    ▼
+                                </span>
+                                <span class="mt-1">{{ experience.yearBegin }} - {{ experience.yearEnd }}</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Date Section -->
-                    <div class="text-sm text-gray-600 mt-2">
-                        <span>{{ experience.yearBegin }} - {{ experience.yearEnd }}</span>
-                    </div>
+                    <div v-show="activeIndex === index" class="mt-4 p-6 bg-gray-100 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold text-textPrimary text-center mb-4">
+                            {{ experience.detailsTitle }}
+                        </h2>
 
-                    <!-- Expanded Section -->
-                    <div v-show="activeIndex === index" class="mt-2 text-gray-700">
-                        <p>{{ experience.details }}</p>
-                        <div class="mt-4 flex gap-4">
+                        <p class="text-textSecondary text-center mb-6">
+                            {{ experience.details }}
+                        </p>
+
+                        <div class="flex items-center gap-6">
+                            <Card3DComponent v-if="experience.image" :image="experience.image"
+                                :description="experience.description" />
+
+                            <p class="text-textSecondary text-lg">
+                                {{ experience.pictureDescription || 'Additional information about the experience.' }}
+                            </p>
+                        </div>
+
+                        <div class="mt-6 flex gap-4 justify-center">
                             <img v-for="(image, imgIndex) in experience.detailImages" :key="imgIndex" :src="image"
-                                alt="Detail" class="w-20 h-20 rounded-lg shadow-md" />
+                                alt="Detail" class="w-20 h-20 rounded-lg shadow-md object-cover" />
                         </div>
                     </div>
                 </li>
@@ -40,96 +88,47 @@
 </template>
 
 <script>
+import Cv from "@/data/CvData.json";
+import Card3DComponent from "@/widgets/Card3DComponent.vue";
 export default {
+    name: "PresentationComponent",
+    components: {
+        Card3DComponent,
+    },
     data() {
         return {
-            experiences: [
-                {
-                    title: "Slate digital",
-                    details: "",
-                    technologyImage: "/images/cv/slate_logo.png",
-                    detailImages: [
-                        "/images/techno/Cpp.png",
-                        "/images/techno/Cmake.png",
-                        "/images/techno/JUCE.png",
-                        "/images/techno/Skia.svg",
-                        "/images/techno/ObjectiveC.png",
-                    ],
-                    yearBegin: "2024",
-                },
-                {
-                    title: "Coexya",
-                    details: "Vue JS app Compote",
-                    technologyImage: "/images/cv/Coexya.png",
-                    detailImages: [
-                        "/images/techno/Vuejs.png",
-                        "/images/techno/Electron.png",
-                        "/images/techno/Playwright.png",
-                    ],
-                    yearBegin: "2023",
-                },
-                {
-                    title: "Newcastle University",
-                    details: "",
-                    technologyImage: "/images/cv/newcastle.png",
-                    detailImages: [
-                        "/images/techno/Python.png",
-                        "/images/techno/Figma.png",
-                        "/images/techno/Research.png",
-                    ],
-                },
-                {
-                    title: "Insa Rennes",
-                    details: " Profil data scientist",
-                    technologyImage: "images/cv/insa_logo.png",
-                    detailImages: [
-                        "/images/techno/Docker.png",
-                        "/images/techno/Kubernetes.png",
-                        "/images/techno/Spring.png",
-                        "/images/techno/Java.png",
-                        "/images/techno/Cpp.png",
-                        "/images/techno/Maven.png",
-                        "/images/techno/Mysql.png",
-                        "/images/techno/Python.png",
-                        "/images/techno/Angular.png",
-                    ],
-                    yearBegin: "2019",
-                    yearEnd: "2024",
-                },
-                {
-                    title: "L'agraphe journal",
-                    details: "Worked on a project to develo",
-                    technologyImage: "images/cv/lagrafe.png",
-                    detailImages: [
-                        "/images/techno/Vuejs.png",
-                        "/images/techno/Express.png",
-                        "/images/techno/Flask.png",
-                        "/images/techno/nginx.png",
-                    ],
-                    yearBegin: "2022",
-
-                },
-                {
-                    title: "Lycée Bourdonnières",
-                    details: "",
-                    technologyImage: "images/cv/bourdonnieres.jpg",
-                    detailImages: [],
-                    yearBegin: "2016",
-                    yearEnd: "2019",
-                },
-            ],
+            experiences: Cv.Cv,
+            description: Cv.description,
+            videoLink: String(Cv.videoLink),
+            title: Cv.title,
             activeIndex: null,
-        };
+            additionnalInformations: Cv.additionnalInformations,
+            titleInfo: Cv.titleInfo,
+
+        }
     },
     methods: {
+
         toggleDetails(index) {
             this.activeIndex = this.activeIndex === index ? null : index;
+
         },
     },
 };
 </script>
 
 <style scoped>
+.cvList {
+    margin-top: 20px;
+}
+
+.cvList li {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
 .rotate-180 {
     transform: rotate(180deg);
     transition: transform 0.3s ease;
