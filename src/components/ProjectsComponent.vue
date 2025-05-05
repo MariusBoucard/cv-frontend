@@ -1,7 +1,6 @@
 <template>
     <div class="flex flex-col items-center min-h-screen bg-gray-100 p-4">
 
-        <!-- Filter Section -->
         <div class="bg-white shadow-md rounded-lg p-4 mb-6 w-4/5">
             <h3 class="text-lg font-bold mb-4">Trier par technologies :</h3>
             <div class="flex gap-4 flex-wrap">
@@ -18,9 +17,6 @@
                 </button>
             </div>
         </div>
-
-
-
 
         <div class="w-4/5">
             <div v-for="(project, index) in   filteredProjects  " :key="index"
@@ -102,7 +98,7 @@
 <script>
 import Card3DComponent from "@/widgets/Card3DComponent.vue";
 import SoundPlayer from "@/widgets/SoundPlayerComponent.vue";
-
+import projectsData from "@/data/ProjectsData.json";
 export default {
     name: "ProjectsComponent",
     components: {
@@ -112,275 +108,11 @@ export default {
     data() {
         return {
             selectedTechnology: null,
-            projects: [
-                {
-                    title: "Ce site internet",
-                    shortDescription: "Capturing moments through the lens.",
-                    details:
-                        "Mobiliser les connaissances et comprendre les bases de la création d'une architecture Spring et Vuejs",
-                    showDetails: false,
-                    detailImages: [
-                        "/images/techno/Vuejs.png",
-                        "/images/techno/Spring.png",
-                        "/images/techno/Docker.png",
-                        "/images/techno/Kubernetes.png",
-                        "/images/techno/nginx.png",
-                    ],
-                    technologies: [
-                        "Vuejs",
-                        "Spring",
-                        "Docker",
-                        "Kubernetes",
-                        "Nginx",
-                    ],
-                    extraContent: {
-                        image: "path-to-photography-image.jpg",
-                        video: "path-to-video.mp4",
-                        soundDry: "http://localhost:8080/api/audio",
-                        soundWet: "http://localhost:8080/api/audio",
-                        links: [
-                            "https://www.example.com/link1",
-                        ],
-                    },
-                    card: {
-                        image: "/images/projets/guitarApp.png",
-                        description: "This is a short description.",
-                    },
-                    github: ["https://github.com/MariusBoucard/cv-frontend", "https://github.com/MariusBoucard/cv-backend"]
-                },
-                {
-                    title: "Virtual Amplifier NAM (VST)",
-                    shortDescription: "Creating and enjoying melodies.",
-                    details:
-                        "Music has always been a source of inspiration for me. I love playing instruments and exploring different genres.",
-                    showDetails: false,
-                    technologies: [
-                        "JUCE",
-                        "C++",
-                        "CMake",
-                        "Blender",
-                    ],
-                    detailImages: [
-                        "/images/techno/Cpp.png",
-                        "/images/techno/JUCE.png",
-                        "/images/techno/Cmake.png",
-                        "/images/techno/blender.png",
-                    ],
-                    extraContent: {
-                        video: null,
-                    },
-                    card: {
-                        image: "/images/projets/guitarApp.png",
-                        description: "This is a short description.",
-                    },
-                    github: "https://github.com/MariusBoucard/GainPlugin"
-                },
-                {
-                    title: "Geiger Noise Generator (VST)",
-                    shortDescription: "Exploring new places and cultures.",
-                    details:
-                        "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
-                    showDetails: false,
-                    detailImages: [
-                        "/images/techno/Cpp.png",
-                        "/images/techno/JUCE.png",
-                        "/images/techno/Cmake.png",
-                        "/images/techno/blender.png",
-                    ],
-                    technologies: [
-                        "JUCE",
-                        "C++",
-                        "CMake",
-                        "Blender",
-                    ],
-                    extraContent: null,
-                    card: {
-                        image: "/images/projets/guitarApp.png",
-                        description: "This is a short description.",
-                    },
-                    github: "https://github.com/MariusBoucard/BitCrusher"
-                },
-                {
-                    title: "L'agrafe Journal",
-                    shortDescription: "Exploring new places and cultures.",
-                    details:
-                        "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
-                    showDetails: false,
-                    detailImages: [
-                        "/images/techno/Vuejs.png",
-                        "/images/techno/Docker.png",
-                        "/images/techno/Express.png",
-                        "/images/techno/nginx.png",
-                    ],
-                    technologies: [
-                        "Vuejs",
-                        "Docker",
-                        "Express",
-                        "Nginx",
-                    ],
-                    extraContent: {
-                        image: "/images/projets/agrafe.png",
-                        links: [
-                            "https://lagrafejournal.com",
-                        ],
-                    },
-
-                    card: {
-                        image: "/images/projets/agrafesite.png",
-                        description: "This is a short description.",
-                    },
-                    github: ["https://github.com/MariusBoucard/agrafeFrontend", "https://github.com/MariusBoucard/agrafeBackend"]
-                },
-                {
-                    title: "Our Journey",
-                    shortDescription: "Exploring new places and cultures.",
-                    details:
-                        "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
-                    showDetails: false,
-                    extraContent: {
-                        links: [
-                            "https://ourjourney.fr",
-                        ],
-                    },
-                    detailImages: [
-                        "/images/techno/Vuejs.png",
-                        "/images/techno/Docker.png",
-                        "/images/techno/Express.png",
-                        "/images/techno/nginx.png",
-                    ],
-                    technologies: [
-                        "Vuejs",
-                        "Docker",
-                        "Express",
-                        "Nginx",
-                    ],
-                    card: {
-                        image: "/images/projets/ourjourney.png",
-                        description: "This is a short description.",
-                    },
-                    github: "https://github.com/MariusBoucard/ourJourney"
-                },
-                {
-                    title: "Guitar Course App",
-                    shortDescription: "Exploring new places and cultures.",
-                    details:
-                        "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
-                    showDetails: false,
-                    extraContent: null,
-                    detailImages: [
-                        "/images/techno/Vuejs.png",
-                        "/images/techno/Electron.png",
-                    ],
-                    technologies: [
-                        "Vuejs",
-                        "Electron",
-                    ],
-                    card: {
-                        image: "/images/projets/guitarApp.png",
-                        description: "This is a short description.",
-                    }
-                    , github: "https://github.com/MariusBoucard/guitarapp"
-                },
-                {
-                    title: "Script App",
-                    shortDescription: "Exploring new places and cultures.",
-                    details:
-                        "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
-                    showDetails: false,
-                    extraContent: null,
-                    technologies: [
-                        "Vuejs",
-                        "Electron",
-                    ],
-                    detailImages: [
-                        "/images/techno/Vuejs.png",
-                        "/images/techno/Electron.png",
-                    ],
-                    card: {
-                        image: "/images/projets/guitarApp.png",
-                        description: "This is a short description.",
-                    },
-                    github: "https://github.com/MariusBoucard/scriptgenerator"
-
-                },
-                {
-                    title: "Nextcloud",
-                    shortDescription: "Exploring new places and cultures.",
-                    details:
-                        "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
-                    showDetails: false,
-                    detailImages: [
-                        "/images/techno/Docker.png",
-                        "/images/techno/Nextcloud.png",
-                        "/images/techno/nginx.png",
-                        "/images/techno/Reseau.png",
-                    ],
-                    technologies: [
-                        "Docker",
-                        "Nextcloud",
-                        "Nginx",
-                        "Reseau",
-                    ],
-                    extraContent: null,
-                    card: {
-                        image: "/images/projets/guitarApp.png",
-                        description: "This is a short description.",
-                    }
-                },
-                {
-                    title: "Locals LLM",
-                    shortDescription: "Exploration d'une utilisation local de LLM dans le cadre de recherches autour du développement d'agents virtuels.",
-                    details:
-                        "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
-                    showDetails: false,
-                    extraContent: null,
-                    technologies: [
-                        "Python",
-                        "HuggingFace",
-                    ],
-                    detailImages: [
-                        "/images/techno/HuggingFace.jpeg",
-                        "/images/techno/lm-studio.png",
-                        "/images/techno/Python.png",
-                    ],
-                    card: {
-                        image: "/images/projets/guitarApp.png",
-                        description: "This is a short description.",
-                    }
-                },
-
-
-                {
-                    title: "Autres",
-                    details: "Reel zoomer, Metronome, eq, ping pong delay",
-                    card: {
-                        image: "/images/projets/guitarApp.png",
-                        description: "This is a short description.",
-                    },
-                    technologies: [
-                        "Flask",
-                        "C++",
-                        "JUCE",
-                        "CMake",
-                        "Java",
-                        "Python",
-                    ],
-                    detailImages: [
-                        "/images/techno/Flask.png",
-                        "/images/techno/Cpp.png",
-                        "/images/techno/JUCE.png",
-                        "/images/techno/Cmake.png",
-                        "/images/techno/Java.png",
-                        "/images/techno/Python.png",
-                    ],
-                    github: ["https://github.com/MariusBoucard/pingPongDelay", "https://github.com/MariusBoucard/bfWebsite"]
-                }
-            ],
+            projects: projectsData.projects
         };
     },
     computed: {
         uniqueTechnologies() {
-            // Extract unique technologies from all projects
             const techSet = new Set();
             this.projects.forEach((project) => {
                 project.technologies.forEach((tech) => techSet.add(tech));
@@ -388,7 +120,6 @@ export default {
             return Array.from(techSet);
         },
         filteredProjects() {
-            // Filter projects based on the selected technology
             if (!this.selectedTechnology) {
                 return this.projects;
             }
