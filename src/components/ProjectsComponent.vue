@@ -37,7 +37,7 @@
                     </div>
                     <div v-show="project.showDetails"
                         class="mt-4 flex justify-center items-center flex-col text-center">
-                        <p class="text-gray-800">{{ project.details }}</p>
+                        <div v-html="markdownToHtml(index)"></div>
 
                         <div v-if="project.extraContent" class="mt-4">
                             <img v-if="project.extraContent.image" :src="project.extraContent.image" alt="Extra Content"
@@ -100,6 +100,7 @@
 import Card3DComponent from "@/widgets/Card3DComponent.vue";
 import SoundPlayer from "@/widgets/SoundPlayerComponent.vue";
 import projectsData from "@/data/ProjectsData.json";
+import { marked } from 'marked';
 
 export default {
     name: "ProjectsComponent",
@@ -110,7 +111,8 @@ export default {
     data() {
         return {
             selectedTechnology: null,
-            projects: projectsData.projects
+            projects: projectsData.projects,
+            markdown: "**pute**",
         };
     },
     computed: {
@@ -128,6 +130,20 @@ export default {
             return this.projects.filter((project) =>
                 project.technologies.includes(this.selectedTechnology)
             );
+        },
+        markdownToHtml() {
+            return (index) => {
+                if (this.projects[index].details) {
+                    this.markdown = this.projects[index].details;
+                }
+                // Convert markdown to HTML
+                marked.setOptions({
+                    gfm: true,
+                    breaks: true,
+                    sanitize: true,
+                });
+                return marked(this.markdown);
+            }
         },
     },
     methods: {

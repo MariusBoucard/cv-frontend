@@ -9,13 +9,13 @@
       "title": "Slate digital",
       "details": "",
       "job": "Ingénieur C++",
-      "detailsTitle": "title",
+      "detailsTitle": "Développement de plugin audio",
       "technologyImage": "/images/cv/slate_logo.png",
       "detailImages": [
         "/images/techno/Cpp.png",
         "/images/techno/Cmake.png",
         "/images/techno/JUCE.png",
-        "/images/techno/Skia.svg",
+        "/images/techno/Skia.png",
         "/images/techno/ObjectiveC.png"
       ],
       "image": "/images/cv/lagrafe.png",
@@ -25,6 +25,7 @@
     {
       "title": "Coexya",
       "details": "Vue JS app Compote",
+      "detailsTitle": "Développement d'une application web",
       "job": "Stage Développeur Web",
       "technologyImage": "/images/cv/Coexya.png",
       "detailImages": [
@@ -39,6 +40,7 @@
       "title": "Newcastle University",
       "details": "",
       "job": "Etudiant",
+      "detailsTitle": "Erasmus",
       "technologyImage": "/images/cv/newcastle.png",
       "detailImages": [
         "/images/techno/Python.png",
@@ -52,6 +54,7 @@
       "title": "Insa Rennes",
       "details": "Profil data scientist",
       "job": "Etudiant",
+      "detailsTitle": "Cursus scolaire",
       "technologyImage": "images/cv/insa_logo.png",
       "detailImages": [
         "/images/techno/Docker.png",
@@ -71,6 +74,7 @@
       "title": "L'agraphe journal",
       "details": "Worked on a project to develop",
       "technologyImage": "images/cv/lagrafe.png",
+      "detailsTitle": "Développement d'une solution Web pour l'association",
       "job": "Développeur Web",
       "detailImages": [
         "/images/techno/Vuejs.png",
@@ -85,6 +89,7 @@
       "title": "Lycée Bourdonnières",
       "details": "",
       "job": "Etudiant",
+      "detailsTitle": "Bac Scientifique",
       "technologyImage": "images/cv/bourdonnieres.jpg",
       "detailImages": [],
       "yearBegin": "2016",
