@@ -2,15 +2,19 @@
     <div class="flex justify-center items-start min-h-screen bg-gray-100">
         <div class="bg-white shadow-md rounded-lg p-6 transition-all duration-300 listItems"
             :class="activeIndex !== null ? 'w-4/5 md:w-3/4' : 'w-3/5 md:w-2/3 lg:w-1/2'">
-            <!-- Title -->
             <h1 class="text-4xl font-extrabold mb-6 text-center text-gray-800">
                 {{ title }}
             </h1>
 
-            <!-- Description -->
             <p class="text-lg text-center text-gray-600 mb-6">
                 {{ description }}
             </p>
+            <div class="flex justify-end">
+                <button @click="fetchPdf"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mb-4 rounded">
+                    CV pdf
+                </button>
+            </div>
 
             <!-- Video -->
             <div class="flex justify-center mb-6">
@@ -40,7 +44,7 @@
                             <!-- Title and Job Section -->
                             <div class="flex flex-col flex-grow">
                                 <h2 class="text-lg font-bold text-gray-800 truncate">
-                                    {{ experience.title }}
+                                    {{ experience.compagnyName }}
                                 </h2>
                                 <p class="text-sm text-gray-600 mt-2 text-center mx-auto">
                                     {{ experience.job }}
@@ -62,18 +66,18 @@
                         <h2 class="text-2xl font-bold text-textPrimary text-center mb-4">
                             {{ experience.detailsTitle }}
                         </h2>
+                        <div v-if="experience.details" v-html="markdownToHtml(experience.details)"></div>
 
-                        <p class="text-textSecondary text-center mb-6">
-                            {{ experience.details }}
-                        </p>
 
-                        <div class="flex items-center gap-6">
-                            <Card3DComponent v-if="experience.image" :image="experience.image"
-                                :description="experience.description" />
 
-                            <p class="text-textSecondary text-lg">
-                                {{ experience.pictureDescription || 'Additional information about the experience.' }}
-                            </p>
+                        <div class="flex items-center gap-6 margin-to:10">
+                            <div v-if="experience.image" class="w-1/2">
+                                <Card3DComponent class="w-full" :image="experience.image"
+                                    :description="experience.description" />
+                            </div>
+
+                            <div v-if="experience.pictureDescription" class="w-1/2"
+                                v-html="markdownToHtml(experience.pictureDescription)"></div>
                         </div>
 
                         <div class="mt-6 flex gap-4 justify-center">
@@ -90,16 +94,20 @@
 <script>
 import Cv from "@/data/CvData.json";
 import Card3DComponent from "@/widgets/Card3DComponent.vue";
+import { marked } from "marked";
+
 export default {
     name: "PresentationComponent",
     components: {
         Card3DComponent,
     },
+
     data() {
         return {
+            markdown: "",
             experiences: Cv.Cv,
             description: Cv.description,
-            videoLink: String(Cv.videoLink),
+            //videoLink: String(Cv.videoLink),
             title: Cv.title,
             activeIndex: null,
             additionnalInformations: Cv.additionnalInformations,
@@ -112,6 +120,37 @@ export default {
         toggleDetails(index) {
             this.activeIndex = this.activeIndex === index ? null : index;
 
+        },
+        markdownToHtml(details) {
+
+
+            marked.setOptions({
+                gfm: true,
+                breaks: true,
+                sanitize: true,
+            });
+            return marked(details);
+        },
+        async fetchPdf() {
+            try {
+                const response = await fetch("http://localhost:8080/api/cvPDF", {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/pdf",
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error("Failed to fetch PDF");
+                }
+
+                const blob = await response.blob();
+
+                const url = window.URL.createObjectURL(blob);
+                window.open(url, "_blank");
+            } catch (error) {
+                console.error("Error fetching PDF:", error);
+            }
         },
     },
 };

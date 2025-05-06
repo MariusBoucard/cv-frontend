@@ -1,5 +1,5 @@
 <template>
-    <div class="card-3d-container w-80 h-96 mx-auto" @mousemove="handleMouseMove" @mouseleave="resetTilt" ref="card">
+    <div class="card-3d-container mx-auto" @mousemove="handleMouseMove" @mouseleave="resetTilt" ref="card">
         <!-- 3D Card -->
         <div
             class="card-3d w-full h-full bg-gray-200 rounded-lg border border-gray-400 shadow-2xl transform transition-transform duration-300">
@@ -9,7 +9,7 @@
                 <img v-if="image" :src="image" alt="Card Image" class="w-full h-full object-cover" />
             </div>
             <!-- Legend -->
-            <div v-if="description" class="legend text-center text-gray-700 font-medium mt-4 px-4">
+            <div v-if="description" class="legend text-center text-gray-700 font-medium mt-4 px-4 mb-4">
                 {{ description }}
             </div>
         </div>

@@ -20,7 +20,7 @@
     </div>
 
     <!-- Router Links -->
-    <div class="router-links">
+    <div class="router-links flex flex-wrap">
       <router-link to="/motivations" class="bubble">Motivations</router-link>
       <router-link to="/cv" class="bubble">CV</router-link>
       <router-link to="/projects" class="bubble">Projects</router-link>
@@ -76,10 +76,8 @@
 .external-links {
   display: flex;
   justify-content: flex-end;
-  /* Aligns links to the right */
   gap: 15px;
   margin-top: 20px;
-  /* Adds spacing from the profile section */
 }
 
 .external-link {
@@ -94,6 +92,8 @@
 
 .router-links {
   display: flex;
+  width: 50%;
+  margin: 0 auto;
   justify-content: center;
   gap: 20px;
   position: relative;

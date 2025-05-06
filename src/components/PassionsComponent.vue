@@ -1,10 +1,10 @@
 <template>
     <div class="flex flex-col items-center min-h-screen bg-gray-100 p-6">
-        <h1 class="text-4xl font-bold mb-6 text-center">My passions</h1>
+        <h1 class="text-4xl font-bold mb-6 text-center">Plus personnellement</h1>
         <p class="text-lg text-gray-700 mb-8 text-center">
-            Au dela d'un informaticien, je suis aussi un humain avec diverses passions, comme la musique, la randonnée,
-            et le sport.
-            La musique, m'apporte comme l'informatique, par la creation
+            Au dela d'un informaticien, je suis aussi un humain avec diverses passions, auxquelles je m'adonne sur le
+            temps libre.
+            Je fais beaucoup de musique et apprécie aller explorer un coin de nature.
         </p>
 
         <div class="w-4/5 relative">
@@ -26,7 +26,7 @@
 
             <div class="flex items-center">
                 <p class="text-gray-700 mb-0 flex-1">{{ project.description }}</p>
-                <div class="mb-0">
+                <div class="mb-0 w-1/2">
                     <Card3DComponent :image="project.card.image" :description="project.card.description" />
                 </div>
             </div>
@@ -53,9 +53,11 @@ export default {
     data() {
         return {
             images: [
-                "/images/cv/Coexya.png",
-                "/images/cv/Coexya.png",
-                "/images/cv/Coexya.png",
+                "/images/passions/chartreuse1.jpg",
+                "/images/passions/moucherotte1.jpg",
+                "/images/passions/skipunk.png",
+                "/images/passions/topin.png",
+                "/images/passions/gazolineMarius.jpg",
             ],
             activeIndex: 1,
             passions: Passions.passions

@@ -32,6 +32,11 @@ const router = createRouter({
       name: 'passions',
       component: () => import('../components/PassionsComponent.vue'),
     },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('../components/ContactComponent.vue'),
+    },
     // {
     //   path: '/about',
     //name: 'about',
