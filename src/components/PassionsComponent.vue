@@ -2,7 +2,9 @@
     <div class="flex flex-col items-center min-h-screen bg-gray-100 p-6">
         <h1 class="text-4xl font-bold mb-6 text-center">My passions</h1>
         <p class="text-lg text-gray-700 mb-8 text-center">
-            Au dela de mes travaux techniques, j'aime aussi partager des moments de création avec d'autres personnes
+            Au dela d'un informaticien, je suis aussi un humain avec diverses passions, comme la musique, la randonnée,
+            et le sport.
+            La musique, m'apporte comme l'informatique, par la creation
         </p>
 
         <div class="w-4/5 relative">

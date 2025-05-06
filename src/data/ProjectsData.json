@@ -25,7 +25,7 @@
     {
       "title": "Virtual Amplifier NAM (VST)",
       "shortDescription": "Plugin audio d'Ampli",
-      "details": "## Développement d’un plugin audio d’amplification virtuelle\n\nDéveloppement d’un plugin audio d’amplification virtuelle à l’aide du framework **JUCE**, reposant sur le moteur open source **Neural Amp Modeler**. Le plugin permet de charger différents modèles d’amplis neuronaux compatibles avec l’architecture du framework d’origine. Il prend également en charge l'importation de réponses impulsionnelles (**IR**), utilisées pour simuler des cabinets de haut-parleurs ou des effets de réverbération.\n\nUne section de filtres paramétriques simples permet d’appliquer une égalisation sommaire du signal audio. L’interface graphique a été conçue en **3D avec Blender**, puis intégrée au plugin pour une présentation visuelle personnalisée.\n\n### Ce projet a permis de :\n\n- Réaliser un proof of concept de plugin audio avec **JUCE** ;\n- Approcher les bases du traitement numérique du signal audio ;\n- Concevoir une architecture modulable pour expérimenter différentes chaînes de traitement audio ;\n- Acquérir les fondamentaux de la modélisation **3D avec Blender**.",
+      "details": "Développement d’un plugin audio d’amplification virtuelle à l’aide du framework **JUCE**, reposant sur le moteur open source **Neural Amp Modeler**. Le plugin permet de charger différents modèles d’amplis neuronaux compatibles avec l’architecture du framework d’origine. Il prend également en charge l'importation de réponses impulsionnelles (**IR**), utilisées pour simuler des cabinets de haut-parleurs ou des effets de réverbération.\n\nUne section de filtres paramétriques simples permet d’appliquer une égalisation sommaire du signal audio. L’interface graphique a été conçue en **3D avec Blender**, puis intégrée au plugin pour une présentation visuelle personnalisée.\n\n### Ce projet a permis de :\n\n- Réaliser un proof of concept de plugin audio avec **JUCE** ;\n- Approcher les bases du traitement numérique du signal audio ;\n- Concevoir une architecture modulable pour expérimenter différentes chaînes de traitement audio ;\n- Acquérir les fondamentaux de la modélisation **3D avec Blender**.",
       "showDetails": false,
 
       "technologies": ["JUCE", "C++", "CMake", "Blender"],
@@ -51,7 +51,7 @@
     {
       "title": "Geiger Noise Generator (VST)",
       "shortDescription": "Exploring new places and cultures.",
-      "details": "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
+      "details": "Développement d’un plugin audio générateur de bruit de type compteur Geiger, conçu comme une extension de l’architecture mise en place lors d’un projet précédent d’amplificateur virtuel. Le projet repose sur JUCE pour le traitement audio et l’interface, C++ pour la logique interne, et Blender pour la création d’une interface utilisateur en 3D.\nL’architecture existante a été réutilisée pour intégrer des filtres simples, facilitant la mise en forme du signal. Ce plugin vise à tester la flexibilité et la réutilisabilité de la structure logicielle développée avec JUCE, en validant sa capacité à être adaptée à un nouveau type de traitement audio.\n     La génération du bruit s’appuie sur un modèle exponentiel simulant le comportement aléatoire d’un compteur Geiger, permettant une synthèse sonore basée sur des distributions de probabilité.\n\n### Ce projet a permis de :\n\n- Réutiliser et valider une architecture JUCE modulaire dans un contexte différent ;\n- Expérimenter la modélisation sonore basée sur des fonctions de probabilité ;\n- Renforcer les compétences en traitement du signal et design d’interfaces 3D avec Blender. \n Ce projet a permis de :\nRéutiliser et valider une architecture JUCE dans un contexte plus agile ;\nExpérimenter la modélisation sonore basée sur des fonctions de probabilité ;         \nRenforcer les compétences en traitement du signal et design d’interfaces 3D avec Blender.",
       "showDetails": false,
       "detailImages": [
         "/images/techno/Cpp.png",
@@ -70,7 +70,7 @@
     {
       "title": "L'agrafe Journal",
       "shortDescription": "Exploring new places and cultures.",
-      "details": "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
+      "details": "Conception et développement d’un site web pour l’association journalistique L’Agrafe, active sur le campus de Rennes 2. Le projet s’appuie sur une architecture VueJS (frontend) / ExpressJS (backend), déployée derrière un proxy NGINX sur une machine virtuelle hébergée chez Blue Ocean.\nLe site comprend un espace d’administration sur mesure, permettant à la rédaction de publier et gérer dynamiquement des articles, ainsi que de renouveler le contenu des pages publiques de manière autonome. L’interface d’édition a été pensée pour être accessible à un public non technique, en tenant compte de ses contraintes et besoins spécifiques.\nCe projet a débuté à la suite d'une discussion avec un ami de la rédaction, avec une première version développée en Flask, avant de migrer vers une architecture plus robuste et modulaire basée sur VueJS et Node/Express. Cette refonte a permis une meilleure séparation des responsabilités, une évolutivité accrue et une gestion plus fluide des contenus.\nCe projet a permis de :\nConcevoir une architecture fullstack personnalisée adaptée à un usage éditorial ;\nMettre en œuvre un déploiement sur infrastructure Linux avec NGINX en reverse proxy ;\nCollaborer avec des utilisateurs non techniques pour recueillir leurs besoins et concevoir une solution intuitive ;\nGérer la migration technologique d’un prototype vers une solution plus maintenable et évolutive.",
       "showDetails": false,
       "detailImages": [
         "/images/techno/Vuejs.png",
@@ -95,7 +95,7 @@
     {
       "title": "Our Journey",
       "shortDescription": "Exploring new places and cultures.",
-      "details": "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
+      "details": "Développement d’un site personnel visant à centraliser et archiver des compositions musicales réalisées en collaboration. Le site repose sur une architecture VueJS (frontend) et ExpressJS (backend), avec une base de données MySQL pour la gestion des contenus. Cette structure, héritée du projet de L’Agrafe, offre une cohérence technique et une bonne maintenabilité.\nL’interface permet de parcourir les morceaux, consulter leurs détails et accéder à l’ensemble des compositions au sein d’une bibliothèque centralisée.\nCe projet a permis de :\nRéutiliser une architecture fullstack éprouvée (VueJS, ExpressJS, MySQL) ;\nConcevoir un système d’archivage structuré pour contenus musicaux ; \n       Approfondir l’utilisation de bases de données relationnelles dans un contexte applicatif simple.",
       "showDetails": false,
       "extraContent": { "links": ["https://ourjourney.fr"] },
       "detailImages": [
@@ -114,7 +114,7 @@
     {
       "title": "Guitar Course App",
       "shortDescription": "Exploring new places and cultures.",
-      "details": "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
+      "details": "Développement d’une application desktop dédiée à la pratique et à la composition à la guitare, construite avec VueJS et emballée avec Electron pour un déploiement multiplateforme. L’application intègre plusieurs outils d’assistance musicale, une visualisation du manche et de ses notes, la possibilité de charger des vidéos localement et de créer des playlists personnalisées, afin de structurer des sessions de travail.\nPensée comme un support quotidien, l'application facilite un entraînement régulier et ciblé, tout en servant d’environnement centralisé pour l’exploration musicale et la composition.\n Ce projet a permis de :\n \nMettre en œuvre VueJS dans un contexte desktop via Electron ; \nConcevoir une interface orientée utilisateur avec gestion locale de fichiers multimédia ;   \nCréer un outil d’assistance musicale personnalisé, adapté à une pratique instrumentale régulière.",
       "showDetails": false,
       "extraContent": null,
       "detailImages": ["/images/techno/Vuejs.png", "/images/techno/Electron.png"],
@@ -128,7 +128,7 @@
     {
       "title": "Script App",
       "shortDescription": "Exploring new places and cultures.",
-      "details": "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
+      "details": "Face à l’inefficacité des outils classiques pour la rédaction de scénarios, une application web en VueJS a été conçue en 35 heures pour répondre spécifiquement aux besoins d’un tournage de clip vidéo. L’interface, pensée pour la fluidité et la structuration du texte, a permis la rédaction d’un script de 20 pages en moins de 5 heures, contre un temps bien plus long estimé avec des solutions non spécialisées.\nCe projet a permis de :\nConcevoir un outil léger et ciblé pour la rédaction de scripts audiovisuels ;\nUtiliser VueJS dans un développement rapide et agile.\n Déployer l'application en utilisant Electron.",
       "showDetails": false,
       "extraContent": null,
       "technologies": ["Vuejs", "Electron"],
@@ -142,7 +142,7 @@
     {
       "title": "Nextcloud",
       "shortDescription": "Exploring new places and cultures.",
-      "details": "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
+      "details": "Mise en place d’une instance auto-hébergée de Nextcloud sur Raspberry Pi, orchestrée via Docker. Ce projet vise à garder un contrôle total sur les données personnelles, en remplaçant les solutions propriétaires telles que Google Drive ou Microsoft OneDrive par une alternative libre et localisée.\nL’installation a nécessité de la comprehension réseau, incluant la gestion des ports et de la sécurité basique.\nCe projet a permis de :\nExpérimenter l’auto-hébergement de services cloud ;\nApprofondir les connaissances en déploiement Docker ;",
       "showDetails": false,
       "detailImages": [
         "/images/techno/Docker.png",
@@ -160,7 +160,7 @@
     {
       "title": "Locals LLM",
       "shortDescription": "Exploration d'une utilisation local de LLM dans le cadre de recherches autour du développement d'agents virtuels.",
-      "details": "Traveling broadens my horizons and helps me appreciate the diversity of the world. Each journey is a new adventure.",
+      "details": "Exploration des modèles de langage (LLM) en local, avec un focus sur les architectures légères adaptées à des environnements à faibles ressources. Les expérimentations ont porté sur la création d’agents autonomes et l’intégration de méthodes de RAG (Retrieval-Augmented Generation) afin d'améliorer les performances et la pertinence des réponses générées.\nCette phase de recherche a également permis d’évaluer l’écosystème Langchain, dont la relative instabilité et complexité technique ont mis en évidence la nécessité de solutions plus robustes pour des cas d’usage réels.\nCe projet a permis de :\nÉvaluer la faisabilité de l’utilisation de LLM en local sans GPU haut de gamme ;\nMettre en œuvre des pipelines RAG simples pour enrichir les réponses de petits modèles ;\nIdentifier les limitations actuelles des frameworks comme Langchain dans un contexte de prototypage léger.",
       "showDetails": false,
       "extraContent": null,
       "technologies": ["Python", "HuggingFace"],
@@ -178,10 +178,9 @@
 
     {
       "title": "Autres",
-      "details": "Reel zoomer, Metronome, eq, ping pong delay",
+      "details": "Réalisations techniques variées autour du traitement audio et du développement web, issues de projets exploratoires ou d’apprentissage ciblé. Parmi ceux-ci :\n– Création d’un site vitrine pour un groupe de musique en utilisant Flask ;\n– Développement d’un métronome et d’un compresseur audio simple avec JUCE, dans le cadre d’une première approche du traitement du signal ;\n– Expérimentation d’un délai de type ping-pong en utilisant Faust, dans le but de tester les capacités du framework en mathématiques et DSP.\nCes projets ont permis de :\nApprofondir les bases du traitement du signal audio en C++ ;\nExplorer différentes approches de conception d’effets audio numériques ;\nExpérimenter plusieurs frameworks spécialisés (JUCE, Faust, Flask) dans des contextes concrets.",
       "card": {
-        "image": "/images/projets/guitarApp.png",
-        "description": "This is a short description."
+        "image": "/images/projets/guitarApp.png"
       },
       "technologies": ["Flask", "C++", "JUCE", "CMake", "Java", "Python"],
       "detailImages": [
