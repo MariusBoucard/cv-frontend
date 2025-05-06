@@ -1,31 +1,37 @@
 <template>
-  <div class="topbar">
+  <div class="topbar bg- bg-primary">
     <!-- Profile Section -->
     <img src="@/assets/images/profilPicture.jpg" alt="Profile Picture" class="profile-pic" />
 
     <div class="profile">
       <div class="profile-info">
         <h2>Marius Boucard Bocciarelli</h2>
-        <p>Ingénieur informatique</p>
-        <p>Passionné de musique et de bricolage informatique</p>
+        <p class="text-textSecondary">Ingénieur informatique</p>
+        <p class="text-textSecondary">Passionné de musique et de bricolage informatique</p>
       </div>
     </div>
 
     <!-- External Links -->
     <div class="external-links">
-      <a href="https://github.com/" target="_blank" class="external-link">GitHub</a>
-      <a href="https://open.spotify.com/" target="_blank" class="external-link">Spotify</a>
+      <a href="https://github.com/" target="_blank"
+        class="external-link text-textSecondary bg-primaryButton hover:bg-secondaryButton hover:text-primary">GitHub</a>
+      <a href="https://open.spotify.com/" target="_blank"
+        class="external-link text-textSecondary bg-primaryButton hover:text-primary hover:bg-secondaryButton">Spotify</a>
       <a href="https://www.linkedin.com/in/marius-boucard-bocciarelli-390793222/" target="_blank"
-        class="external-link">LinkedIn</a>
+        class="external-link text-textSecondary bg-primaryButton hover:text-primary hover:bg-secondaryButton">LinkedIn</a>
     </div>
 
     <!-- Router Links -->
     <div class="router-links flex flex-wrap">
-      <router-link to="/motivations" class="bubble">Motivations</router-link>
-      <router-link to="/cv" class="bubble">CV</router-link>
-      <router-link to="/projects" class="bubble">Projects</router-link>
-      <router-link to="/passions" class="bubble">Passions</router-link>
-      <router-link to="/contact" class="bubble">Contact</router-link>
+      <router-link to="/motivations"
+        class="bubble bg-secondaryButton text-white hover:bg-primaryButton">Motivations</router-link>
+      <router-link to="/cv" class="bubble bg-secondaryButton text-white hover:bg-primaryButton">CV</router-link>
+      <router-link to="/projects"
+        class="bubble bg-secondaryButton text-white hover:bg-primaryButton">Projects</router-link>
+      <router-link to="/passions"
+        class="bubble bg-secondaryButton text-white hover:bg-primaryButton">Passions</router-link>
+      <router-link to="/contact"
+        class="bubble bg-secondaryButton text-white hover:bg-primaryButton">Contact</router-link>
     </div>
   </div>
 </template>
@@ -37,8 +43,7 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px;
-  background-color: #f4f4f4;
-  border-bottom: 2px solid #ccc;
+
 }
 
 .profile {
@@ -70,7 +75,6 @@
 .profile-info p {
   margin: 0;
   font-size: 0.9rem;
-  color: #666;
 }
 
 .external-links {
@@ -82,12 +86,12 @@
 
 .external-link {
   text-decoration: none;
-  color: #007bff;
   font-weight: bold;
 }
 
 .external-link:hover {
   text-decoration: underline;
+  color: white;
 }
 
 .router-links {
@@ -104,14 +108,8 @@
 .bubble {
   text-decoration: none;
   padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
   border-radius: 20px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-}
-
-.bubble:hover {
-  background-color: #0056b3;
 }
 </style>

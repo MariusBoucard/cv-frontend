@@ -1,6 +1,6 @@
 <template>
-    <div class="flex justify-center items-start min-h-screen bg-gray-100">
-        <div class="bg-white shadow-md rounded-lg p-6 transition-all duration-300 listItems"
+    <div class="flex justify-center items-start min-h-screen bg-background">
+        <div class="bg-backgroundComp shadow-md rounded-lg p-6 transition-all duration-300 listItems"
             :class="activeIndex !== null ? 'w-4/5 md:w-3/4' : 'w-3/5 md:w-2/3 lg:w-1/2'">
             <h1 class="text-4xl font-extrabold mb-6 text-center text-gray-800">
                 {{ title }}
@@ -11,7 +11,7 @@
             </p>
             <div class="flex justify-end">
                 <button @click="fetchPdf"
-                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mb-4 rounded">
+                    class="bg-primaryButton hover:bg-secondaryButton text-white font-bold py-2 px-4 mb-4 rounded">
                     CV pdf
                 </button>
             </div>
@@ -30,7 +30,7 @@
             <p class="text-base text-center text-gray-600">
                 {{ additionnalInformations }}
             </p>
-            <ul class="cvList">
+            <ul class="cvList bg-listPrimary">
                 <li v-for="(experience, index) in experiences" :key="index" class="mb-6 border-b pb-6">
                     <div class="flex items-center gap-6 cursor-pointer" @click="toggleDetails(index)">
                         <!-- Image Section -->
@@ -62,7 +62,7 @@
                         </div>
                     </div>
 
-                    <div v-show="activeIndex === index" class="mt-4 p-6 bg-gray-100 rounded-lg shadow-md">
+                    <div v-show="activeIndex === index" class="mt-4 p-6 bg-listSecondary rounded-lg shadow-md">
                         <h2 class="text-2xl font-bold text-textPrimary text-center mb-4">
                             {{ experience.detailsTitle }}
                         </h2>
@@ -164,7 +164,6 @@ export default {
 .cvList li {
     padding: 10px;
     border-radius: 8px;
-    background-color: #f9f9f9;
     transition: background-color 0.3s ease;
 }
 

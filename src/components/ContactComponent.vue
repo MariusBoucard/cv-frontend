@@ -1,9 +1,12 @@
 <template>
-    <div class="contact-card">
-        <h1>{{ name }}</h1>
-        <p><strong>Téléphone:</strong> {{ phone }}</p>
-        <p><strong>Email:</strong> <a :href="'mailto:' + email">{{ email }}</a></p>
-        <p><strong>Mastodon:</strong> <a :href="mastodonLink" target="_blank">{{ mastodonHandle }}</a></p>
+    <div class="bg-background width-full h-full flex items-center justify-center ">
+
+        <div class="contact-card bg-backgroundComp">
+            <h1>{{ name }}</h1>
+            <p><strong>Téléphone:</strong> {{ phone }}</p>
+            <p><strong>Email:</strong> <a :href="'mailto:' + email">{{ email }}</a></p>
+            <p><strong>Mastodon:</strong> <a :href="mastodonLink" target="_blank">{{ mastodonHandle }}</a></p>
+        </div>
     </div>
 </template>
 
@@ -25,14 +28,12 @@ export default {
 <style scoped>
 .contact-card {
     max-width: 400px;
-    margin: 50px auto;
     padding: 20px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
 }
 
 .contact-card h1 {

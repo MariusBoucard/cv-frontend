@@ -1,13 +1,13 @@
 <template>
-    <div class="flex flex-col items-center min-h-screen bg-gray-100 p-6">
+    <div class="flex flex-col items-center min-h-screen bg-background p-6">
         <h1 class="text-4xl font-bold mb-6 text-center">Plus personnellement</h1>
-        <p class="text-lg text-gray-700 mb-8 text-center">
+        <p class="text-lg text-gray-700 mb-8 w-3/4 text-center">
             Au dela d'un informaticien, je suis aussi un humain avec diverses passions, auxquelles je m'adonne sur le
             temps libre.
             Je fais beaucoup de musique et apprécie aller explorer un coin de nature.
         </p>
 
-        <div class="w-4/5 relative">
+        <div class="w-4/5 relative mb-4">
             <div class="flex transition-transform duration-500 ease-in-out"
                 :style="{ transform: `translateX(-${activeIndex * (imageWidth + translationOffset)}%)` }">
                 <div v-for="(image, index) in images" :key="index"
@@ -21,7 +21,7 @@
         </div>
 
         <div v-for="( project, index ) in  passions " :key="index"
-            class="w-3/4 border-b last:no-border last:rounded-lg p-6">
+            class="w-3/4 border-b last:no-border bg-backgroundComp last:rounded-lg p-6">
             <h2 class="text-2xl font-bold mb-2">{{ project.title }}</h2>
 
             <div class="flex items-center">

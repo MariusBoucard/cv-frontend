@@ -1,18 +1,18 @@
 <template>
-    <div class="flex flex-col items-center min-h-screen bg-gray-100 p-4">
+    <div class="flex flex-col items-center min-h-screen bg-background p-4">
 
-        <div class="bg-white shadow-md rounded-lg p-4 mb-6 w-4/5">
+        <div class="bg-backgroundComp shadow-md rounded-lg p-4 mb-6 w-4/5">
             <h3 class="text-lg font-bold mb-4">Trier par technologies :</h3>
             <div class="flex gap-4 flex-wrap">
                 <button v-for="(tech, index) in uniqueTechnologies" :key="index" @click="filterByTechnology(tech)"
                     :class="{
-                    'bg-blue-500 text-white': selectedTechnology === tech,
+                    'bg-primaryButton text-white': selectedTechnology === tech,
                     'bg-gray-200 text-gray-700': selectedTechnology !== tech
-                }" class="px-4 py-2 rounded-lg shadow-md hover:bg-blue-400 transition">
+                }" class="px-4 py-2 rounded-lg shadow-md hover:bg-secondaryButton transition">
                     {{ tech }}
                 </button>
                 <button @click="clearFilter"
-                    class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-400 transition">
+                    class="bg-primaryButton text-white px-4 py-2 rounded-lg shadow-md hover:bg-secondaryButton transition">
                     Toutes
                 </button>
             </div>
@@ -20,7 +20,7 @@
 
         <div class="w-4/5">
             <div v-for="(project, index) in   filteredProjects  " :key="index"
-                class="bg-white shadow-md rounded-lg mb-6 p-6 transition-all duration-300 flex flex-col md:flex-row"
+                class="bg-backgroundComp shadow-md rounded-lg mb-6 p-6 transition-all duration-300 flex flex-col md:flex-row"
                 :class="{ 'h-auto': project.showDetails, 'h-auto': !project.showDetails }">
 
                 <div class="flex-[2]">
@@ -182,10 +182,7 @@ button.text-blue-500 {
     margin-top: 16px;
 }
 
-button.text-blue-500:hover {
-    color: #2563eb;
-    text-decoration: underline;
-}
+
 
 .bg-white {
     display: flex;

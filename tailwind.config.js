@@ -1,15 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        primary: '#4F46E5', // A beautiful purple
-        secondary: '#22D3EE', // A light blue
-        accent: '#F59E0B', // A warm yellow
-        background: '#F3F4F6', // Light gray for backgrounds
-        textPrimary: '#1F2937', // Dark gray for text
-        textSecondary: '#6B7280', // Medium gray for secondary text
+        primary: '#a7c957',
+        secondary: '#6a994e',
+        tertiary: '#386641',
+        primaryButton: '#386641',
+        secondaryButton: '#6a994e',
+        accent: '#F59E0B',
+        background: '#f2e8cf',
+        textPrimary: '#1F2937',
+        textSecondary: '#a98467',
+        listPrimary: '#90e0ef',
+        listSecondary: '#48cae4',
+        backgroundComp: '#f0f4f8',
+        cardBg: '#f0f4f8',
       },
       spacing: {
         72: '18rem',
