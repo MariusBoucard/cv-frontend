@@ -107,7 +107,7 @@ export default {
             markdown: "",
             experiences: Cv.Cv,
             description: Cv.description,
-            //videoLink: String(Cv.videoLink),
+            videoLink: import.meta.env.BACKEND_URL + "/api/video",
             title: Cv.title,
             activeIndex: null,
             additionnalInformations: Cv.additionnalInformations,
@@ -133,7 +133,7 @@ export default {
         },
         async fetchPdf() {
             try {
-                const response = await fetch("http://localhost:8080/api/cvPDF", {
+                const response = await fetch( env.process+"/api/cvPDF", {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/pdf",

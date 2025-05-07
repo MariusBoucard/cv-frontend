@@ -37,7 +37,7 @@
       ],
       "extraContent": {
         "image": "path-to-photography-image.jpg",
-        "video": "path-to-video.mp4",
+        "video": "/api/video",
         "soundDry": "http://localhost:8080/api/audio",
         "soundWet": "http://localhost:8080/api/audio",
         "links": ["https://www.example.com/link1"]
