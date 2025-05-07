@@ -76,18 +76,18 @@
                         <a v-if="typeof project.github === 'string'" :href="project.github" target="_blank"
                             class="flex items-center bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-700 transition">
                             <img src="/images/projets/github.png" alt="GitHub" class="w-5 h-5 mr-2" />
-                            <span>View on GitHub</span>
+                            <span>GitHub</span>
                         </a>
 
                         <div v-else-if="Array.isArray(project.github)" class="flex flex-col space-y-2">
                             <a v-for="(link, index) in project.github" :key="index" :href="link" target="_blank"
                                 class="flex items-center bg-gray-800 text-white px-4 py-2 rounded-lg shadow-md hover:bg-gray-700 transition">
                                 <img src="/images/projets/github.png" alt="GitHub" class="w-5 h-5 mr-2" />
-                                <span>View on GitHub {{ index + 1 }}</span>
+                                <span>GitHub {{ index + 1 }}</span>
                             </a>
                         </div>
 
-                        <p v-else class="text-gray-500 italic">No GitHub link available</p>
+                        <p v-else class="text-gray-500 italic">Pas de lien Github disponible</p>
                     </div>
                 </div>
 

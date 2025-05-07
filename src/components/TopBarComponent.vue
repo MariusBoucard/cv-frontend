@@ -1,25 +1,28 @@
 <template>
   <div class="topbar bg- bg-primary">
     <!-- Profile Section -->
-    <img src="@/assets/images/profilPicture.jpg" alt="Profile Picture" class="profile-pic" />
+    <div class="flex">
 
-    <div class="profile">
-      <div class="profile-info">
-        <h2>Marius Boucard Bocciarelli</h2>
-        <p class="text-textSecondary">Ingénieur informatique</p>
-        <p class="text-textSecondary">Passionné de musique et de bricolage informatique</p>
+      <img src="@/assets/images/profilPicture.jpg" alt="Profile Picture" class="profile-pic" />
+
+      <div class="profile">
+        <div class="profile-info">
+          <h2>Marius Boucard Bocciarelli</h2>
+          <p class="text-textSecondary">Ingénieur informatique</p>
+          <p class="text-textSecondary">Passionné de musique et de bricolage informatique</p>
+        </div>
+
+      </div>
+      <div class="external-links">
+        <a href="https://github.com/" target="_blank"
+          class="external-link text-white bg-primaryButton hover:bg-secondaryButton hover:text-primary">GitHub</a>
+        <a href="https://open.spotify.com/" target="_blank"
+          class="external-link text-white bg-primaryButton hover:text-primary hover:bg-secondaryButton">Spotify</a>
+        <a href="https://www.linkedin.com/in/marius-boucard-bocciarelli-390793222/" target="_blank"
+          class="external-link text-white bg-primaryButton hover:text-primary hover:bg-secondaryButton">LinkedIn</a>
       </div>
     </div>
 
-    <!-- External Links -->
-    <div class="external-links">
-      <a href="https://github.com/" target="_blank"
-        class="external-link text-textSecondary bg-primaryButton hover:bg-secondaryButton hover:text-primary">GitHub</a>
-      <a href="https://open.spotify.com/" target="_blank"
-        class="external-link text-textSecondary bg-primaryButton hover:text-primary hover:bg-secondaryButton">Spotify</a>
-      <a href="https://www.linkedin.com/in/marius-boucard-bocciarelli-390793222/" target="_blank"
-        class="external-link text-textSecondary bg-primaryButton hover:text-primary hover:bg-secondaryButton">LinkedIn</a>
-    </div>
 
     <!-- Router Links -->
     <div class="router-links flex flex-wrap">
@@ -43,66 +46,73 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px;
-
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .profile {
   display: flex;
+  width: 100%;
   align-items: center;
+  text-align: left;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
-  height: 80%;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 3;
+  margin-right: 20px;
   border: 5px solid #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .profile-info {
-  margin-left: 180px;
+  flex: 1;
 }
 
 .profile-info h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .profile-info p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
 }
 
 .external-links {
   display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 50px;
+  justify-content: end;
+  gap: 10px;
+  margin-top: auto;
 }
 
 .external-link {
   text-decoration: none;
   font-weight: bold;
-}
-
-.external-link:hover {
-  text-decoration: underline;
-  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
 }
 
 .router-links {
   display: flex;
-  width: 50%;
-  margin: 0 auto;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  position: relative;
-  z-index: 1;
-  margin-top: -30px;
+  gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.external-link:hover {
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .bubble {
@@ -110,6 +120,18 @@
   padding: 10px 15px;
   border-radius: 20px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.bubble:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
 }
 </style>

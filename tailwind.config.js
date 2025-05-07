@@ -4,17 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#a7c957',
-        secondary: '#6a994e',
-        tertiary: '#386641',
-        primaryButton: '#386641',
-        secondaryButton: '#6a994e',
+        primary: '#B6D369',
+        secondary: '#D0E562',
+        tertiary: '#93C48B',
+        primaryButton: '#B2945B',
+        secondaryButton: '#D0E562',
         accent: '#F59E0B',
-        background: '#f2e8cf',
+        background: '#EBE4D5',
         textPrimary: '#1F2937',
-        textSecondary: '#a98467',
-        listPrimary: '#90e0ef',
-        listSecondary: '#48cae4',
+        textSecondary: '#555555',
+
+        listPrimary: '#B6D369',
+        listSecondary: '#D0E562',
         backgroundComp: '#f0f4f8',
         cardBg: '#f0f4f8',
       },

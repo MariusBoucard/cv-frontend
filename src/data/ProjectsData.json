@@ -3,7 +3,7 @@
     {
       "title": "Cv en ligne",
       "shortDescription": "Ce projet que vous consultez, a été réalisé afin de développer mes compréhesions en déploiement via Docker et Kubernetes.",
-      "details": "Mise en place d'une **architecture complète** composée :\n\n* d’un **frontend en VueJS**, avec **Tailwind CSS** pour une interface responsive\n* d’un **backend en Spring Boot**, assurant la logique métier\n\nLes deux services sont :\n\n* **Conteneurisés avec Docker**\n* **Déployés sur un cluster Kubernetes**, permettant d’adopter les bonnes pratiques en environnement distribué\n\n🖥️ **Fonctionnalités clés** :\n\n* Diffusion de **flux vidéo** depuis le backend\n* Gestion de contenu multimédia **en temps réel**\n\n🎯 **Compétences développées** :\n\n* Développement **web fullstack** : VueJS, Spring Boot\n* **Conteneurisation** : Docker\n* **Orchestration** : Kubernetes\n* Manipulation de flux vidéo\n* Utilisation de **framework CSS utilitaires** comme Tailwind CSS",
+      "details": "Mise en place d'une **architecture complète** composée :\n\n* d’un **frontend en VueJS**, avec **Tailwind CSS** pour une interface responsive\n* d’un **backend en Spring Boot**, assurant la logique métier\n\nLes deux services sont :\n\n* **Conteneurisés avec Docker**\n* **Déployés sur un cluster Kubernetes**, permettant d’adopter les bonnes pratiques en environnement distribué\n\n **Fonctionnalités clés** :\n\n* Diffusion de **flux vidéo** depuis le backend\n\n\n **Compétences développées** :\n\n* Développement **web fullstack** : VueJS, Spring Boot\n* **Conteneurisation** : Docker\n* **Orchestration** : Kubernetes\n Utilisation de **framework CSS utilitaires** comme Tailwind CSS",
       "showDetails": false,
       "detailImages": [
         "/images/techno/Vuejs.png",
@@ -24,7 +24,7 @@
     },
     {
       "title": "Virtual Amplifier NAM (VST)",
-      "shortDescription": "Plugin audio utilisant JUCE et intégrant le framework Neural Amp Modeler afin de modéliser un ampli virtuel.",
+      "shortDescription": "Plugin audio utilisant JUCE et intégrant le framework Neural Amp Modeler afin de modéliser un ampli virtuel. Le but de ce projet est de fournir une implémentation isofeature du plugin NAM en utilisant JUCE comme Framework graphique à la communauté.",
       "details": "Développement d’un plugin audio d’amplification virtuelle à l’aide du framework **JUCE**, reposant sur le moteur open source **Neural Amp Modeler**. Le plugin permet de charger différents modèles d’amplis neuronaux compatibles avec l’architecture du framework d’origine. Il prend également en charge l'importation de réponses impulsionnelles (**IR**), utilisées pour simuler des cabinets de haut-parleurs ou des effets de réverbération.\n\nUne section de filtres paramétriques simples permet d’appliquer une égalisation sommaire du signal audio. L’interface graphique a été conçue en **3D avec Blender**, puis intégrée au plugin pour une présentation visuelle personnalisée.\n\n### Ce projet a permis de :\n\n- Réaliser un proof of concept de plugin audio avec **JUCE** ;\n- Approcher les bases du traitement numérique du signal audio ;\n- Concevoir une architecture modulable pour expérimenter différentes chaînes de traitement audio ;\n- Acquérir les fondamentaux de la modélisation **3D avec Blender**.",
       "showDetails": false,
 
@@ -51,7 +51,7 @@
     {
       "title": "Geiger Noise Generator (VST)",
       "shortDescription": "Plugin audio en C++ ajoutant des artefacts au signal audio. En explorant la modélisation sonore, pour reproduire le bruit d'un compteur geiger.",
-      "details": "Basé sur l'architecture modulaire développée avec JUCE\n* Interface graphique **3D avec Blender**\n* Intégration de **filtres simples** pour le traitement du signal\n\n🧠 **Algorithme sonore** :\n\n* Utilise un **modèle exponentiel** simulant des événements aléatoires\n* Génère un **bruit probabiliste** fidèle à un détecteur Geiger\n\n---\n\n#### ✅ Ce projet a permis de :\n\n* Réutiliser une architecture **JUCE** dans un nouveau contexte\n* Expérimenter la **synthèse sonore probabiliste**\n* Renforcer les compétences en **traitement du signal** et **interface 3D**",
+      "details": "Basé sur l'architecture modulaire développée avec JUCE\n* Interface graphique **3D avec Blender**\n* Intégration de **filtres simples** pour le traitement du signal\n\n **Algorithme sonore** :\n\n* Utilise un **modèle exponentiel** simulant des événements aléatoires\n* Génère un **bruit probabiliste** fidèle à un détecteur Geiger\n\n---\n\n#### Ce projet a permis de :\n\n* Réutiliser une architecture **JUCE** dans un nouveau contexte\n* Expérimenter la **synthèse sonore probabiliste**\n* Renforcer les compétences en **traitement du signal** et **interface 3D**",
       "showDetails": false,
       "detailImages": [
         "/images/techno/Cpp.png",
@@ -70,7 +70,7 @@
     {
       "title": "L'agrafe Journal",
       "shortDescription": "Site internet doté d'un backend ainsi que d'une page admin permettant à l'équipe de rédaction du journal d'ajouter leurs propres contenus.",
-      "details": "### 📰 **L'agrafe Journal**\n\nConception et développement d’un **site web éditorial** pour l’association L’Agrafe (Université Rennes 2) :\n\n🧱 **Architecture** :\n\n* Frontend : **VueJS**\n* Backend : **ExpressJS**\n* Proxy : **NGINX**\n* Hébergement : VM chez **Blue Ocean**\n\n🛠️ **Fonctionnalités** :\n\n* Espace d’**administration personnalisé**\n* Gestion autonome des contenus par des rédacteurs non techniques\n* Migration depuis un prototype **Flask** vers une solution **robuste et modulaire**\n\n---\n\n#### ✅ Ce projet a permis de :\n\n* Concevoir une **architecture fullstack éditoriale**\n* Mettre en œuvre un **déploiement sur Linux + NGINX**\n* Travailler avec des utilisateurs **non techniques**\n* Gérer une **migration technologique** pour améliorer l’évolutivité",
+      "details": "### **L'agrafe Journal**\n\nConception et développement d’un **site web éditorial** pour l’association L’Agrafe (Université Rennes 2) :\n\n**Architecture** :\n\n* Frontend : **VueJS**\n* Backend : **ExpressJS**\n* Proxy : **NGINX**\n* Hébergement : VM chez **Blue Ocean**\n\n**Fonctionnalités** :\n\n* Espace d’**administration personnalisé**\n* Gestion autonome des contenus par des rédacteurs non techniques\n* Migration depuis un prototype **Flask** vers une solution **robuste et modulaire**\n\n---\n\n####  Ce projet a permis de :\n\n* Concevoir une **architecture fullstack éditoriale**\n* Mettre en œuvre un **déploiement sur Linux + NGINX**\n* Travailler avec des utilisateurs **non techniques**\n* Gérer une **migration technologique** pour améliorer l’évolutivité",
       "showDetails": false,
       "detailImages": [
         "/images/techno/Vuejs.png",

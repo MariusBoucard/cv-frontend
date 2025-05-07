@@ -2,7 +2,7 @@
     <div class="flex justify-center items-start min-h-screen bg-background">
         <div class="bg-backgroundComp shadow-md rounded-lg p-6 transition-all duration-300 listItems w-4/5">
             <!-- Title -->
-            <h1 class="text-3xl font-bold mb-4 text-center text-textPrimary">My Motivation</h1>
+            <h1 class="text-3xl font-bold mb-4 text-center text-textPrimary">Lettre de motivations</h1>
 
             <!-- Short Description -->
             <p class="text-lg text-gray-700 mb-6 text-center text-textSecondary">
@@ -13,7 +13,6 @@
             <div class="flex justify-center mb-6">
                 <video class="rounded-lg shadow-md" controls width="640" height="360">
                     <source src="http://localhost:8080/api/video" type="video/mp4" />
-                    Your browser does not support the video tag.
                 </video>
             </div>
 
