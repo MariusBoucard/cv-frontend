@@ -63,14 +63,25 @@ Mon projet actuel le plus stimulant est la création d’une architecture de plu
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: "MotivationComponent",
     data() {
         return {
-            videoLink:  process.env.VUE_APP_BACKEND_URL +"/api/video/" 
+            videoLink:  import.meta.env.VITE_APP_BACKEND_URL +"/api/video" 
 //(import.meta.env.process.BACKEND_URL+"/api/video/" || ""),
         };
     },
+    mounted() {
+
+    axios.get(import.meta.env.VITE_APP_BACKEND_URL +'/health')
+        .then(response => {
+console.log(response.data);
+        })
+        .catch(error => {
+        });
+},
 };
 </script>
 
