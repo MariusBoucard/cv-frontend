@@ -4,18 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#B6D369',
+        primary: '#62A364',
         secondary: '#D0E562',
         tertiary: '#93C48B',
-        primaryButton: '#B2945B',
+        primaryButton: '#2F272B',
         secondaryButton: '#D0E562',
         accent: '#F59E0B',
         background: '#EBE4D5',
         textPrimary: '#1F2937',
         textSecondary: '#555555',
 
-        listPrimary: '#B6D369',
-        listSecondary: '#D0E562',
+        listPrimary: '#8BC77E',
+        listSecondary: '#95B88D',
         backgroundComp: '#f0f4f8',
         cardBg: '#f0f4f8',
       },

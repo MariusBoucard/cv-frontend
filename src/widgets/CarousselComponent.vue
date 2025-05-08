@@ -1,10 +1,10 @@
 <template>
-    <div class="relative w-full max-w-4xl mx-auto">
+    <div class="relative w-full  mx-auto">
         <!-- Carousel Container -->
         <div class="flex items-center justify-center overflow-hidden relative h-64">
-            <div v-for="(image, index) in images" :key="index" class="absolute transition-transform duration-500"
+            <div v-for="(image, index) in images" :key="index" class="absolute aspect-w-1 aspect-h-1 w-48 transition-transform duration-500"
                 :style="getImageStyle(index)">
-                <img :src="image" alt="Carousel Image" class="w-48 h-48 object-cover rounded-lg shadow-md" />
+                <img :src="image" alt="Carousel Image" class="w-full h-full object-cover rounded-lg shadow-md" />
             </div>
         </div>
 

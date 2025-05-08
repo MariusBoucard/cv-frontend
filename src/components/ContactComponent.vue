@@ -1,6 +1,5 @@
 <template>
-    <div class="bg-background width-full h-full flex items-center justify-center ">
-
+    <div class="bg-background w-full h-screen flex items-start justify-center pt-10">
         <div class="contact-card bg-backgroundComp">
             <h1>{{ name }}</h1>
             <p><strong>Téléphone:</strong> {{ phone }}</p>

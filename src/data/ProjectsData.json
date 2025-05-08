@@ -14,7 +14,7 @@
       ],
       "technologies": ["Vuejs", "Spring", "Docker", "Kubernetes", "Nginx"],
       "card": {
-        "image": "/images/projets/guitarApp.png",
+        "image": "/images/projets/cv.png",
         "description": "Capture d'écran du site"
       },
       "github": [
@@ -35,13 +35,7 @@
         "/images/techno/Cmake.png",
         "/images/techno/blender.png"
       ],
-      "extraContent": {
-        "image": "path-to-photography-image.jpg",
-        "video": "/api/video",
-        "soundDry": "http://localhost:8080/api/audio",
-        "soundWet": "http://localhost:8080/api/audio",
-        "links": ["https://www.example.com/link1"]
-      },
+
       "card": {
         "image": "/images/projets/amp.png",
         "description": "Interface de l'ampli"
@@ -60,7 +54,11 @@
         "/images/techno/blender.png"
       ],
       "technologies": ["JUCE", "C++", "CMake", "Blender"],
-      "extraContent": null,
+      "extraContent": {
+        "soundDry": "/api/audio?name=geigerless.mp3&type=dry",
+        "soundWet": "/api/audio?name=geiger.mp3&type=wet",
+        "label": "Test compteur Geiger / BitCrusher"
+      },
       "card": {
         "image": "/images/projets/geiger.png",
         "description": "Compteur Geiger"

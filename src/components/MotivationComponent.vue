@@ -11,7 +11,7 @@
 
             <!-- Video Section -->
             <div class="flex justify-center mb-6">
-                <video class="rounded-lg shadow-md" controls width="640" height="360">
+                <video v-if="backendAvailable" class="rounded-lg shadow-md" controls width="640" height="360">
                     <source :src="videoLink" type="video/mp4" />
                 </video>
             </div>
@@ -19,36 +19,28 @@
             <!-- Long Motivational Text -->
             <div class=" text-textSecondary">
                 <p class="mb-4">
-                    Cela fait un moment que je m’intéresse à votre entreprise, et l’ouverture de votre recrutement me donne enfin l’occasion de vous écrire. 
-Ce que vous défendez en tant qu’entreprise – l’égalité, le partage, la démocratie dans le travail – ce sont aussi mes repères. En découvrant 
-le collectif Libre Entreprise, j’ai eu le sentiment de tomber sur quelque chose de rare et cohérent. Je veux faire partie d’un environnement comme celui-là.
+                    Je vous adresse cette lettre afin de vous faire part de ma motivation à rejoindre votre équipe, dont l’approche m’inspire depuis quelque temps. Ce que vous défendez – l’égalité, le partage, la démocratie dans le travail – ce sont aussi mes repères. En découvrant le collectif Libre Entreprise, j’ai eu le sentiment de découvrire quelque chose de rare et cohérent. Je veux faire partie d’un environnement comme celui-là.
                 </p>
 
                 <p class="mb-4">
 
-Mon parcours s’est construit dans une grande part grâce aux logiciels libres. Cet univers m’a permis de progresser rapidement, en autonomie, tout en accédant à des connaissances techniques précieuses, souvent inaccessibles dans des cadres plus fermés. Dans le même esprit de partage, je rends publics l’ensemble de mes projets personnels, afin que d’autres puissent s’en inspirer ou les faire évoluer.
-                </p>
+                    Mon parcours s’est construit en grande partie grâce aux logiciels libres. Cet univers m’a permis de progresser rapidement, en autonomie, tout en accédant à des connaissances précieuses. Dans le même esprit de partage, je rends publics mes projets personnels afin que d’autres puissent s’en inspirer ou les faire évoluer. J’aime également explorer des terrains techniques variés, comme en témoigne mon projet actuel autour d’une architecture de plugins audio en C++, pensé pour être libre, évolutif et utile à d’autres développeurs.                </p>
 
                 <p class="mb-4">
 
-Mon projet actuel le plus stimulant est la création d’une architecture de plugins audio en C++, visant à faciliter le travail des développeurs en les libérant des contraintes périphériques au traitement du signal. Je m’appuie sur JUCE pour la partie graphique et je développe progressivement une base fiable, pensée pour être évolutive et facilement réutilisable.
-                </p>
+                    Ces dernières années, j’ai conçu et administré plusieurs sites web, notamment pour l’association L’Agrafe, un projet personnel, ainsi que mon CV en ligne. J’ai utilisé Vue.js, mon framework frontend de prédilection, que je trouve particulièrement intuitif et agréable à manipuler. En parallèle, j’ai développé des backends avec ExpressJS et Spring Boot, ce qui m’a permis d’avoir une comprehension complète de l’architecture web, du front jusqu’au serveur. Ces expériences m’ont apporté une vraie polyvalence ainsi qu’une autonomie technique que j’ai plaisir à mettre au service de projets collectifs.                </p>
 
                 <p class="mb-4">
-                    Au-delà de la technique, ce que je recherche dans mon travail, c’est un cadre bienveillant et respectueux, où l’on peut grandir, s’exprimer, apprendre au contact des autres, et surtout, construire ensemble. J’aime l’intelligence collective, l’échange d’idées, et je crois profondément que la diversité des points de vue est indispensable à l’émergence des meilleures solutions. Je suis convaincu que les valeurs démocratiques que vous défendez garantissent un cadre serein, propice à l’épanouissement de chacun et à l’efficacité du groupe.
-                </p>
+                    Ce que je recherche dans mon travail, c’est un cadre bienveillant et respectueux, où l’on peut grandir, s’exprimer, apprendre au contact des autres, et surtout, construire ensemble. J’aime l’intelligence collective, l’échange d’idées, et je crois profondément que la diversité des points de vue est indispensable à l’émergence des meilleures solutions. Les valeurs démocratiques que vous défendez me semblent garantir un cadre serein, propice à l’épanouissement de chacun et à l’efficacité du groupe.                </p>
 
                 <p class="mb-4">
-                    Sur le plan personnel, je suis rigoureux, curieux, autonome dans mes apprentissages, et toujours volontaire pour avancer et aider. Mon esprit critique, mon goût pour la création (nourri notamment par la musique), et mon énergie font de moi un moteur dans les projets d’équipe.
-                </p>
+                    Sur le plan personnel, je suis rigoureux, curieux, autonome dans mes apprentissages, et toujours volontaire pour avancer et aider. Mon esprit critique, mon goût pour la création (nourri notamment par la musique), et mon énergie font de moi un moteur dans les projets d’équipe.                </p>
 
                 <p class="mb-4">
-                    Actuellement en poste à Grenoble, je souhaiterais revenir à Nantes afin de retrouver un cadre professionnel plus aligné avec mes aspirations. Je suis flexible sur la date d’embauche (idéalement entre septembre et octobre) et disponible pour un entretien à distance, voire une journée d’essai en présentiel.
-                </p>
+                    Actuellement en poste à Grenoble, je souhaiterais revenir à Nantes afin de retrouver un cadre professionnel plus aligné avec mes aspirations. Je suis flexible sur la date d’embauche (idéalement entre septembre et octobre) et disponible pour un entretien à distance, voire une journée d’essai en présentiel.                </p>
 
                 <p class="mb-4">
-                    Je serais heureux de pouvoir échanger avec vous et, je l’espère, de contribuer à l’aventure Code Lutin. Merci pour l’attention portée à ma démarche.
-                </p>
+                    Je serais heureux de pouvoir échanger avec vous et, je l’espère, de contribuer à l’aventure Code Lutin. Merci pour l’attention portée à ma démarche.                </p>
 
                 <p class="mb-4">
                     Bien à vous,
@@ -69,9 +61,23 @@ export default {
     name: "MotivationComponent",
     data() {
         return {
-            videoLink:  import.meta.env.VITE_APP_BACKEND_URL +"/api/video" 
-//(import.meta.env.process.BACKEND_URL+"/api/video/" || ""),
+            videoLink:  import.meta.env.VITE_APP_BACKEND_URL +"/api/video?name=motivations.mp4", 
+            backendAvailable: false,
         };
+    },
+    methods: {
+        async checkBackend() {
+            try {
+                const response = await fetch(this.meta.env.VITE_APP_BACKEND_URL+"/health"); 
+                if (response.ok) {
+                    this.backendAvailable = true;
+                } else {
+                    this.backendAvailable = false;
+                }
+            } catch (error) {
+                this.backendAvailable = false;
+            }
+        },
     },
     mounted() {
 
@@ -81,7 +87,9 @@ console.log(response.data);
         })
         .catch(error => {
         });
+        this.checkBackend();
 },
+
 };
 </script>
 

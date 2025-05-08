@@ -1,15 +1,15 @@
 <template>
   <div class="topbar bg- bg-primary">
     <!-- Profile Section -->
-    <div class="flex">
+    <div class="flex profile-container">
 
       <img src="@/assets/images/profilPicture.jpg" alt="Profile Picture" class="profile-pic" />
 
       <div class="profile">
         <div class="profile-info">
           <h2>Marius Boucard Bocciarelli</h2>
-          <p class="text-textSecondary">Ingénieur informatique</p>
-          <p class="text-textSecondary">Passionné de musique et de bricolage informatique</p>
+          <p class="text-white">Ingénieur informatique</p>
+          <p class="text-white">Passionné de musique et de bricolage informatique</p>
         </div>
 
       </div>
@@ -47,7 +47,6 @@
   justify-content: flex-start;
   padding: 20px;
   backdrop-filter: blur(10px);
-  border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -76,19 +75,19 @@
 
 .profile-info h2 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
+  font-weight: bold;
 }
 
 .profile-info p {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .external-links {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 50px;
   justify-content: end;
   gap: 10px;
   margin-top: auto;
@@ -97,7 +96,7 @@
 .external-link {
   text-decoration: none;
   font-weight: bold;
-  padding: 10px 15px;
+  padding:  10px;
   border-radius: 10px;
 }
 
@@ -117,7 +116,7 @@
 
 .bubble {
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 20px;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -127,11 +126,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 
 .bubble:hover {
   background: rgba(255, 255, 255, 0.4);
   transform: scale(1.05);
+}
+
+
+/* Media Query for Small Screens */
+@media (max-width: 720px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile {
+    align-items: center;
+    text-align: center;
+  }
+
+  .external-links {
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
 </style>

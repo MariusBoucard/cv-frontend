@@ -21,19 +21,19 @@
         </div>
 
         <div v-for="( project, index ) in  passions " :key="index"
-            class="w-3/4 border-b last:no-border bg-backgroundComp last:rounded-lg p-6">
-            <h2 class="text-2xl font-bold mb-2">{{ project.title }}</h2>
+    class="w-3/4 holder border-b last:no-border bg-backgroundComp last:rounded-lg p-6">
+    <h2 class="text-2xl font-bold mb-2">{{ project.title }}</h2>
 
-            <div class="flex items-center">
-                <p class="text-gray-700 mb-0 flex-1">{{ project.description }}</p>
-                <div class="mb-0 w-1/2">
-                    <Card3DComponent :image="project.card.image" :description="project.card.description" />
-                </div>
-            </div>
-            <div v-if="project.imageList" class="mt-4">
-                <CarousselComponent :images="project.imageList" />
-            </div>
+    <div class="flex flex-col md:flex-row items-center">
+        <p class="text-gray-700 mb-4 md:mb-0 flex-1">{{ project.description }}</p>
+        <div class="w-full md:w-1/2">
+            <Card3DComponent :image="project.card.image" :description="project.card.description" />
         </div>
+    </div>
+    <div v-if="project.imageList" class="mt-4">
+        <CarousselComponent :images="project.imageList" />
+    </div>
+</div>
     </div>
 </template>
 
@@ -168,6 +168,11 @@ button.text-blue-500:hover {
 @media (min-width: 768px) {
     .bg-white {
         flex-direction: row;
+    }
+}
+@media (max-width: 768px) {
+    .holder {
+        width:100%;
     }
 }
 </style>

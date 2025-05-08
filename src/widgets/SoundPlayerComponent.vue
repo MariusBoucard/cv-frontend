@@ -86,10 +86,10 @@ export default {
         },
         initializeAudio() {
             if (!this.audioDry) {
-                this.audioDry = new Audio(this.inputDry);
+                this.audioDry = new Audio( import.meta.env.VITE_APP_BACKEND_URL + this.inputDry);
             }
             if (!this.audioWet) {
-                this.audioWet = new Audio(this.inputWet);
+                this.audioWet = new Audio( import.meta.env.VITE_APP_BACKEND_URL +this.inputWet);
             }
         },
         playAudio() {
