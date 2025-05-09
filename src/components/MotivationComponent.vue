@@ -11,7 +11,7 @@
 
             <!-- Video Section -->
             <div class="flex justify-center mb-6">
-                <video v-if="backendAvailable" class="rounded-lg shadow-md" controls width="640" height="360">
+                <video class="rounded-lg shadow-md" controls width="640" height="360">
                     <source :src="videoLink" type="video/mp4" />
                 </video>
             </div>
@@ -61,33 +61,26 @@ export default {
     name: "MotivationComponent",
     data() {
         return {
-            videoLink:  import.meta.env.VITE_APP_BACKEND_URL +"/api/video?name=motivations.mp4", 
+            videoLink:  import.meta.env.VITE_APP_BACKEND_URL +"/api/video?name=cv.mp4", 
             backendAvailable: false,
         };
     },
     methods: {
-        async checkBackend() {
-            try {
-                const response = await fetch(this.meta.env.VITE_APP_BACKEND_URL+"/health"); 
-                if (response.ok) {
-                    this.backendAvailable = true;
-                } else {
-                    this.backendAvailable = false;
-                }
-            } catch (error) {
-                this.backendAvailable = false;
-            }
-        },
+
     },
     mounted() {
 
     axios.get(import.meta.env.VITE_APP_BACKEND_URL +'/health')
         .then(response => {
 console.log(response.data);
+            if (response.status === 200) {
+                this.backendAvailable = true;
+            } else {
+                this.backendAvailable = false;
+            }
         })
         .catch(error => {
         });
-        this.checkBackend();
 },
 
 };

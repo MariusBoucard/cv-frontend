@@ -15,4 +15,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  server: {
+    allowedHosts: ['cv-marius-boucard-bocciarelli.duckdns.org', 'cv-front.web.svc.cluster.local'], // Add your allowed hosts here
+  },
 })

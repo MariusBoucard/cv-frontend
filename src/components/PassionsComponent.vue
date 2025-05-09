@@ -4,7 +4,7 @@
         <p class="text-lg text-gray-700 mb-8 w-3/4 text-center">
             Au dela d'un informaticien, je suis aussi un humain avec diverses passions, auxquelles je m'adonne sur le
             temps libre.
-            Je fais beaucoup de musique et apprécie aller explorer un coin de nature.
+            Je fais beaucoup de musique, de sport, et apprécie aller explorer un coin de nature.
         </p>
 
         <div class="w-4/5 relative mb-4">

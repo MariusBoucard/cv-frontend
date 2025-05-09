@@ -14,9 +14,9 @@
 
       </div>
       <div class="external-links">
-        <a href="https://github.com/" target="_blank"
+        <a href="https://github.com/MariusBoucard" target="_blank"
           class="external-link text-white bg-primaryButton hover:bg-secondaryButton hover:text-primary">GitHub</a>
-        <a href="https://open.spotify.com/" target="_blank"
+        <a href="https://open.spotify.com/intl-fr/artist/1ihPL4eI2ThTMGhWiPVef0" target="_blank"
           class="external-link text-white bg-primaryButton hover:text-primary hover:bg-secondaryButton">Spotify</a>
         <a href="https://www.linkedin.com/in/marius-boucard-bocciarelli-390793222/" target="_blank"
           class="external-link text-white bg-primaryButton hover:text-primary hover:bg-secondaryButton">LinkedIn</a>
