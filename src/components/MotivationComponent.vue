@@ -2,7 +2,7 @@
     <div class="flex justify-center items-start min-h-screen bg-background">
         <div class="bg-backgroundComp shadow-md rounded-lg p-6 transition-all duration-300 listItems w-4/5">
             <!-- Title -->
-            <h1 class="text-3xl font-bold mb-4 text-center text-textPrimary">Lettre de motivations</h1>
+            <h1 class="text-3xl font-bold mb-4 text-center text-textPrimary">Lettre de motivation</h1>
 
             <!-- Short Description -->
             <p class="text-lg text-gray-700 mb-6 text-left text-textSecondary">
@@ -19,7 +19,7 @@
             <!-- Long Motivational Text -->
             <div class=" text-textSecondary">
                 <p class="mb-4">
-                    Je vous adresse cette lettre afin de vous faire part de ma motivation à rejoindre votre équipe, dont l’approche m’inspire depuis quelque temps. Ce que vous défendez – l’égalité, le partage, la démocratie dans le travail – ce sont aussi mes repères. En découvrant le collectif Libre Entreprise, j’ai eu le sentiment de découvrire quelque chose de rare et cohérent. Je veux faire partie d’un environnement comme celui-là.
+                    Je vous adresse cette lettre afin de vous faire part de ma motivation à rejoindre votre équipe, dont l’approche m’inspire depuis longtemps. Ce que vous défendez – l’égalité, le partage, la démocratie dans le travail – ce sont aussi mes repères. En découvrant le collectif Libre Entreprise, j’ai eu le sentiment de découvrir quelque chose de rare et cohérent. Je veux faire partie d’un environnement comme celui-là.
                 </p>
 
                 <p class="mb-4">
@@ -37,7 +37,7 @@
                     Sur le plan personnel, je suis rigoureux, curieux, autonome dans mes apprentissages, et toujours volontaire pour avancer et aider. Mon esprit critique, mon goût pour la création (nourri notamment par la musique), et mon énergie font de moi un moteur dans les projets d’équipe.                </p>
 
                 <p class="mb-4">
-                    Actuellement en poste à Grenoble, je souhaiterais revenir à Nantes afin de retrouver un cadre professionnel plus aligné avec mes aspirations. Je suis flexible sur la date d’embauche (idéalement entre septembre et octobre) et disponible pour un entretien à distance, voire une journée d’essai en présentiel.                </p>
+                    Actuellement en poste à Grenoble, je souhaiterais revenir à Nantes afin de retrouver un cadre professionnel plus en adéquation avec mes aspirations. Je suis flexible sur la date d’embauche et disponible pour un entretien à distance, j'aimerais aussi me déplacer afin de pouvoir vous rencontrer en présentiel.                </p>
 
                 <p class="mb-4">
                     Je serais heureux de pouvoir échanger avec vous et, je l’espère, de contribuer à l’aventure Code Lutin. Merci pour l’attention portée à ma démarche.                </p>
